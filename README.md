@@ -1,5 +1,5 @@
 # Trackgenix SA 
-Trackgenix is a useful tool which helps companies to keep register of team projects, teams itself, and worked hours in an easy and quick way.
+Trackgenix is a useful tool which helps companies to keep register of team projects, teams itself, and worked hours in an easy and quickly way.
 ## Installation
 Tracgenix app should be preferably run in [Google](https://www.google.com.ar/?hl=es). 
 ```
