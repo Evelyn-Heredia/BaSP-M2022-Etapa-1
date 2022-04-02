@@ -9,7 +9,7 @@ body{
 header{
     position: fixed;
     width: 100%;
-    height: 9%;
+    height: 9.5%;
     top: 0;
     right: 0;
     left: 0;
@@ -17,30 +17,19 @@ header{
 }
 aside{
     position: fixed;
-    width: 16%;
+    width: 252px;
     height: 80%;
     left: 0;
-    top: 9%;
+    top: 9.5%;
     background-color: #aace98;
 }
-footer{
-    position: fixed;
-    width: 100%;
-    height: auto;
-    top: 89%;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: #373867;
-}
-ul{
+aside ul{
     width: 240px;
     bottom: 50%;
-    list-style-type: none;
     padding: 6px;
     
 }
-li a{
+aside a{
     display: block;
     width: 225px;
     margin: 25px 0px;
@@ -52,37 +41,58 @@ li a{
     font-weight: 400;
     text-transform: capitalize;
     text-decoration: none;
+    list-style-type: none;
 }
 main{
     display: block;
-    width: 84%;
-    height: auto;
-    margin: auto;
-    float: right;
-    background-color: #ffffff;
-    background-image: url("../assets/homepage-background.png");
-    background-size: cover;
+    height: 600%;
+    margin-top: 71px;
+    margin-bottom: 86.8px;
+    margin-right: 0;
+    margin-left: 252px;
+    background-color: red;
 }
 h1{
-    padding: 10px;
+    padding: 20px;
     font-size: 40px;
     font-weight: 800 bold; 
     color: #ffffff;
     text-transform: uppercase;
+    text-align: center;
+}
+footer{
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: auto;
+    top: 89%;
+    bottom: 0;
+    padding: 3px;
+    background-color: #373867;
+    list-style-type: none;
+    color: #aace98;
+    text-align: center;
+}
+footer ul li{
+    display: inline-block;
+    padding: 2px;
 }
 .header-logo{
     width: 64px;
     height: 64px;
     display: block;
-    margin: auto;
+    margin-top: 4px;
+    margin-left: 50%;
 }
 .btn-sign-up{
-    float: right;
+    display: block;
     width: 65px;
     height: 35px;
-    top: 2%;
-    bottom: 90%;
     border-radius: 5px;
+    margin-top: -49px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 93%;
     border: 2px solid #373867;
     background-color: #aace98;
     color: #373867;
@@ -96,6 +106,38 @@ h1{
     text-decoration: underline;
 }
 .two{
+    display: inline-block;
+    margin-top: 73.33px;
     width: 400px;
     height: 400px;
+}
+.homepg{
+    display: block;
+    height: 684.5px;
+    margin: auto;
+    text-align: center;
+    background-image: url(../assets/homepage-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wh-is-trackgenix{
+    width: 850px;
+    height: 615.5px;
+    margin-bottom: 0;
+    background-color: blueviolet;
+}
+.choose-me{
+    width: 850px;
+    height: 684.5px;
+    background-color: pink;
+}
+.about-us{
+    width: 850px;
+    height: 684.5px;
+    background-color: lightskyblue;
+}
+.contact{
+    width: 850px;
+    height: 684.5px;
+    background-color: darkolivegreen;
 }
