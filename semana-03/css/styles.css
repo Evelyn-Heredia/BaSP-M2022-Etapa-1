@@ -1,6 +1,6 @@
 body{
     background-color: #ffffff;
-    font-family: 'Roboto', sans-serif, arial;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
@@ -44,12 +44,13 @@ aside a{
     list-style-type: none;
 }
 main{
-    display: block;
+    display: inline-block;
     height: 600%;
     margin-top: 71px;
     margin-bottom: 86.8px;
     margin-right: 0;
     margin-left: 252px;
+    align-content: center;
     background-color: red;
 }
 h1{
@@ -76,6 +77,9 @@ footer{
 footer ul li{
     display: inline-block;
     padding: 2px;
+}
+h2{
+    
 }
 .header-logo{
     width: 64px;
@@ -112,32 +116,80 @@ footer ul li{
     height: 400px;
 }
 .homepg{
-    display: block;
-    height: 684.5px;
-    margin: auto;
+    display: inline-block;
+    width: 100%;
+    height: 20%;
+    padding-top: 71px;
+    padding-bottom: 84.92px;
+    /*height: 613.5px;
+    padding-top: 71px;
+    padding-bottom: 84.92px;
+    margin: auto;*/
     text-align: center;
     background-image: url(../assets/homepage-background.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .wh-is-trackgenix{
-    width: 850px;
-    height: 615.5px;
-    margin-bottom: 0;
+    display: inline-block;
+    width: 100%;
+    height:20%%;
+    margin: auto;
     background-color: blueviolet;
 }
+.wh-is-trackgenix article{
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+    width: 600px;
+    margin: 20px;
+    float: left;
+}
+.wh-is-trackgenix h2{
+    font-size: 40px;
+    font-weight: 700 bold;
+    line-height: 46.88px;
+    text-align: center;
+    margin: 30px;
+    }
+.wh-is-trackgenix h3{
+    font-size: 40px;
+    font-weight: 700 bold;
+    line-height: 35.16px;
+    text-align: center;
+    margin: 40px;
+    }
+.wh-is-trackgenix p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    text-align: center;
+    margin: 50px;
+    }
+.wh-is-trackgenix img{
+    width: 465.54px;
+    height: auto;
+    float: right;
+    margin: 30px;
+}
 .choose-me{
-    width: 850px;
-    height: 684.5px;
+    display: inline-block;
+    width: 100%;
+    height:20%%;
+    margin: auto;
     background-color: pink;
 }
 .about-us{
-    width: 850px;
-    height: 684.5px;
+    display: inline-block;
+    width: 100%;
+    height:20%%;
+    margin: auto;
     background-color: lightskyblue;
 }
 .contact{
-    width: 850px;
-    height: 684.5px;
+    display: inline-block;
+    width: 100%;
+    height:20%%;
+    margin: auto;
     background-color: darkolivegreen;
 }
