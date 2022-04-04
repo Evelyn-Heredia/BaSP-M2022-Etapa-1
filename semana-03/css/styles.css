@@ -68,11 +68,12 @@ h2{
     font-size: 40px;
     font-weight: 700 bold;
     line-height: 46.88px;
+    text-transform: capitalize;
     text-align: center;
     margin: 30px;
     }
 h3{
-    margin: 30px;
+    margin: 10px;
     font-size: 26px;
     font-weight: 700 bold;
     line-height: 30.47px;
@@ -144,13 +145,13 @@ footer ul li{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.wh-is-trackgenix{
+.wh-is-trackgenix, .choose-me, .about-us{
     display: inline-block;
     width: 100%;
     height: 25%;
     margin: auto;
+    text-align: center;
     padding-top: 60px;
-    background-color: blueviolet;
 }
 .wh-is-trackgenix article{
     display: inline-block;
@@ -174,15 +175,10 @@ footer ul li{
     margin: 30px;
 }
 .choose-me{
-    display: inline-block;
-    width: 100%;
-    height:25%;
-    margin: auto;
     padding-top: 90px;
     padding-left: 10%;
-    background-color: pink;
 }
-.choose-me div{
+.choose-me div {
     display: inline-block;
     width: 438px;
     height: 126 px;
@@ -205,14 +201,44 @@ footer ul li{
     margin-right: 0;
 }
 .about-us{
-    display: inline-block;
-    width: 100%;
-    height:25%;
-    margin: auto;
-    background-color: lightskyblue;
+    padding-top: 80px;
 }
 .about-us div{
-    
+    display: inline-block;
+    width: 1000px;
+    margin: 15px auto;
+}
+.about-us-img1{
+    display: inline-block;
+    width: 364px;
+    height: 216px;
+    float: right;
+}
+.about-us-pg1{
+    display: inline-block;
+    width: 626px;
+    height: 216px;
+    margin: auto;
+    padding: 40px 0px;
+    font-size: 20px;
+    text-align: justify;
+    float: left;
+}
+.about-us-img2{
+    display: inline-block;
+    width: 364px;
+    height: 216px;
+    float: left;
+}
+.about-us-pg2{
+    display: inline-block;
+    width: 626px;
+    height: 216px;
+    margin: auto;
+    padding: 40px 0px;
+    font-size: 20px;
+    text-align: justify;
+    float: right;
 }
 .contact{
     display: inline-block;
