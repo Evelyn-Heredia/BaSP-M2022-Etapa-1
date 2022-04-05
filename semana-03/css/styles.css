@@ -7,6 +7,7 @@ body{
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
+    text-transform: capitalize;
     text-align: center;
     color: #373867;
 }
@@ -38,7 +39,6 @@ aside a{
     color: #373867;
     font-size: 17px;
     font-weight: 400;
-    text-transform: capitalize;
     text-decoration: none;
     list-style-type: none;
 }
@@ -49,9 +49,14 @@ aside ul{
     text-align: left;
 }
 main{
-    background-color: red;
     margin-right: 0;
-    margin-left: 252px;    
+    margin-left: 252px;
+}
+main a{
+    color: #373867;
+    text-decoration: none;
+    list-style-type: none;
+    text-transform: capitalize;
 }
 h1{
     margin-top: 5%;
@@ -65,17 +70,13 @@ h2{
     font-size: 40px;
     font-weight: 700 bold;
     line-height: 46.88px;
-    text-transform: capitalize;
-    text-align: center;
-    margin: 30px;
+    margin: 10px 30px;
     }
 h3{
     margin: 10px;
     font-size: 26px;
     font-weight: 700 bold;
     line-height: 30.47px;
-    text-transform: capitalize;
-    text-align: center;
 }
 footer{
     position: fixed;
@@ -89,7 +90,6 @@ footer{
     font-weight: 700 bold;
     line-height: 15px;
     color: #aace98;
-    text-align: center;
 }
 footer ul li{
     display: inline-block;
@@ -124,152 +124,167 @@ footer ul li{
     text-align: left;
     text-decoration: underline;
 }
-.two{
+.home-pg-logo{
     display: inline-block;
     margin-bottom: 5%;
     width: 400px;
     height: 400px;
+    vertical-align: middle;
 }
-/* poner todas las section en uno solo*/
-.wh-is-trackgenix, .choose-me, .about-us, .contact{
+main section{
     display: inline-block;
     width: 100%;
     height: 25%;
     margin: auto;
-    text-align: center;
     padding-top: 60px;
+    vertical-align: middle;
+    align-items: center;
 }
 .homepg{
-    display: inline-block;
-    width: 100%;
-    height: 25%;
-    padding-top: 71px;
-    padding-bottom: 84.92px;
-    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 78px;
     background-image: url(../assets/homepage-background.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
+.wh-is-trackgenix{
+    padding-top: 110px;
+}
 .wh-is-trackgenix article{
     display: inline-block;
-    width: 600px;
     margin: auto;
+    width: 600px;
+    vertical-align: top;
 }
 .wh-is-trackgenix p{
     font-size: 20px;
     font-weight: 400;
     line-height: 23.44px;
-    text-align: center;
+    text-align: justify;
     margin: 50px;
-    }
+}
 .wh-is-trackgenix img{
-    width: 465.54px;
+    width: 400px;
     height: auto;
-    float: right;
-    margin: 30px;
+    margin-right: 0;
+    margin-left: 35px;
+    vertical-align: top;
+}
+.wh-is-trackgenix h2{
+    margin: 10px 30px;
 }
 .choose-me div {
     display: inline-block;
-    width: 438px;
-    height: 126 px;
-    margin: 10px 50px;
+    width: 450px;
+    margin: 5px 70px;
+    text-align: justify;
+}
+.choose-me{
+    padding-top: 95px;
 }
 .choose-me div h3{
     margin:auto;
-   
+    text-align: left;
+    padding-left: 95px;
 }
 .choose-me div img{
     display: inline-block;
     width: 92.84px;
     height: 92.84px;
     margin-left: 0;
+    margin-right: 5px;
+    vertical-align: top;
 }
 .choose-me div p{
     display: inline-block;
-    width: 326px;
+    width: 340px;
     height: 92.84px;
     margin-right: 0;
+}
+.about-us{
+    padding-top: 85px;
+    padding-bottom: 25px;
 }
 .about-us div{
     display: inline-block;
     width: 1000px;
-    margin: 15px auto;
+    margin: 17px auto;
 }
 .about-us-img1{
     display: inline-block;
     width: 364px;
     height: 216px;
-    float: right;
+    margin-right: 0;
 }
 .about-us-pg1{
     display: inline-block;
     width: 626px;
     height: 216px;
     margin: auto;
-    padding: 40px 0px;
+    padding: 27px 0px;
     font-size: 20px;
     text-align: justify;
     float: left;
 }
-/*probar solo con ancho */
 .about-us-img2{
     display: inline-block;
     width: 364px;
     height: 216px;
-    float: left;
+    margin-left: 0;
 }
 .about-us-pg2{
     display: inline-block;
     width: 626px;
     height: 216px;
     margin: auto;
-    padding: 40px 0px;
     font-size: 20px;
     text-align: justify;
     margin-right: 0;
 }
 .contact{
-    background-color: palevioletred;
+    background-color: yellowgreen;
 }
+form{
+    display: inline-block;
+    background-color: pink;
+    width: 30%;
+    left: 0;
+    padding: 15px;
+    text-align: left;
+}
+input[type=text], input[type=email], input[type=select], input[type=tel], select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #373867;
+    text-transform: capitalize;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #373867;
+    color: #aace98;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 .contact address{
     display: inline-block;
-    width: 35%;
-    height: 35%;
-    text-align:left;
+    background-color: blue;
+    width: 40%;
+    right: 0;
+    text-align: left;
 }
-.contact form{
-    display: inline-block;
-    width: 35%;
-    height: 35%;
-    text-align:left;
+.contact-address-items{
+    left: 0;
 }
-.contact form input{
-    display: inline-block;
-    width: 200px;
-    height: 30px;
-    margin: 20px 5px;
-    border: 2px #373867;
-}
-.contact-columns{
-    display: inline-block;
-    width: 100%;
-    height: 30%;
-}
-.contact-address-list{
-    width: 450px;
-    height: 120px;
-    margin: 0 0 20px;
+.contact-address-items p{
+    right: 0;
     text-align: justify;
 }
-.contact-address-list img{
-    width: 80px;
-    height: 80px;
-    margin-right: 0;
-    float: left;
-}
-.contact-address-list p{
-    width: 320px;
-    height: 20px;
-    margin-right: 0;
-    float: right;
+.contact-footer{
+    background-color: rebeccapurple;
+    bottom: 0;
+    columns: 3;
 }
