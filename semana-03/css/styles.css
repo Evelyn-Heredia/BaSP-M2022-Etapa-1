@@ -40,7 +40,6 @@ aside a{
     font-size: 17px;
     font-weight: 400;
     text-decoration: none;
-    list-style-type: none;
 }
 aside ul{
     width: 240px;
@@ -55,7 +54,6 @@ main{
 main a{
     color: #373867;
     text-decoration: none;
-    list-style-type: none;
     text-transform: capitalize;
 }
 h1{
@@ -67,16 +65,19 @@ h1{
     text-transform: uppercase;
 }
 h2{
+    margin: auto;
     font-size: 40px;
     font-weight: 700 bold;
     line-height: 46.88px;
     margin: 10px 30px;
     }
 h3{
-    margin: 10px;
+    width: 33%;
+    margin: auto;
     font-size: 26px;
+    text-align: left;
     font-weight: 700 bold;
-    line-height: 30.47px;
+    line-height: 31px;
 }
 footer{
     position: fixed;
@@ -202,8 +203,8 @@ main section{
     margin-right: 0;
 }
 .about-us{
-    padding-top: 85px;
-    padding-bottom: 25px;
+    padding-top: 100px;
+    padding-bottom: 40px;
 }
 .about-us div{
     display: inline-block;
@@ -212,25 +213,26 @@ main section{
 }
 .about-us-img1{
     display: inline-block;
-    width: 364px;
-    height: 216px;
+    width: 354px;
     margin-right: 0;
+    margin-left: 10px;
+    vertical-align: middle;
 }
 .about-us-pg1{
     display: inline-block;
     width: 626px;
     height: 216px;
     margin: auto;
-    padding: 27px 0px;
     font-size: 20px;
     text-align: justify;
-    float: left;
+    vertical-align: middle;
 }
 .about-us-img2{
     display: inline-block;
-    width: 364px;
-    height: 216px;
+    width: 354px;
     margin-left: 0;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 .about-us-pg2{
     display: inline-block;
@@ -240,51 +242,84 @@ main section{
     font-size: 20px;
     text-align: justify;
     margin-right: 0;
+    vertical-align: middle;
 }
 .contact{
-    background-color: yellowgreen;
+    text-align: center;
+    padding-top: 73px;
 }
 form{
     display: inline-block;
-    background-color: pink;
-    width: 30%;
-    left: 0;
-    padding: 15px;
+    width: 260px;
+    margin: 0px 80px 0px 0px;
+    vertical-align: top;
     text-align: left;
-}
-input[type=text], input[type=email], input[type=select], input[type=tel], select, textarea {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid #373867;
+    color: #373867;
     text-transform: capitalize;
 }
-input[type=submit] {
-    width: 100%;
-    background-color: #373867;
-    color: #aace98;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
+input, select, textarea {
+    width: 260px;
+    height: 32px;
     border-radius: 4px;
+    margin: 8px 0;
+    border: 1px solid #373867;
+    
+}
+input[type=submit] {
+    width: 260px;
+    background-color: #aace98;
+    margin: 8px 0px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+  }
+.contact form label{
+      text-align: left;
+      font-size: 14px;
+      line-height: 16px;
   }
 .contact address{
     display: inline-block;
-    background-color: blue;
-    width: 40%;
+    width: 590px;
     right: 0;
-    text-align: left;
+    vertical-align: top;
 }
 .contact-address-items{
-    left: 0;
-}
-.contact-address-items p{
-    right: 0;
+    display: inline-block;
+    width: 450px;
+    height: 160px;
+    margin: 0px 0px 14px 200px;
     text-align: justify;
 }
+.contact-address-items img{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    margin-right: 5px;
+    margin-bottom: 18px;
+}
+.contact-address-items p{
+    display: inline-block;
+    width: 326px;
+    height: 200px;
+    margin-right: 0;
+}
 .contact-footer{
-    background-color: rebeccapurple;
-    bottom: 0;
-    columns: 3;
+    width: 100%;
+    height: 250px;
+    bottom: 0px;
+}
+.contact-footer-item{
+    display: inline-block;
+    width: 33%;
+    margin: auto;
+}
+.contact-footer-item ol li{
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+.contact-footer-item ol {
+    display: inline-block;
+    text-align: left;
 }
