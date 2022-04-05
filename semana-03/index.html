@@ -50,8 +50,8 @@
                 <img class="home-pg-logo" src="assets/icons/logo.png" alt="Trackgenix logo">
             </section>
             <section class="wh-is-trackgenix" id="what-track">
-                <article>            
-                    <h2>Hi, I'm Trackgenix by Baltazar's Team</h2>
+                <div class="article-what-is">  
+                    <h2>Hi, I'm Trackgenix by Baltazar's Team</h2>          
                     <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur saepe blanditiis iusto ipsam
@@ -63,7 +63,7 @@
                         odio nostrum quaerat dolore voluptatibus ea, similique cum, accusamus incidunt dolorem maxime
                         reprehenderit accusantium. Sit, ipsa ad.
                     </p>
-                </article>
+                </div>
                 <img src="assets/hi-laptop.png" alt="Taking time">
             </section>
             <section class="choose-me" id="why-track">
@@ -154,20 +154,19 @@
                     <label for="mail">Email:</label> 
                     <input id="mail" type="email" name="email" placeholder="xxx@mail.com">
                     <label for="sector">Sector:</label>
-                    <select id="sector" name="sector" size="3" >
-                        <option value="fornt-end">front end</option>
-                        <option value="back-end">back end</option>
-                        <option value="human-resources">human resources</option>
-                        <option value="marketing">marketing</option>
+                    <select id="sector" name="sector">
+                        <option value="front-end">Front end</option>
+                        <option value="back-end" selected>Back end</option>
+                        <option value="human-resources">Human resources</option>
+                        <option value="marketing">Marketing</option>
                     </select> 
-                    <input id="sector" type="select" name="sector" placeholder="Discovery">
                     <label for="pnumber">Phone number:</label> 
                     <input id="pnumber" type="tel" name="pnumber" placeholder="341-1234567">
                     <label for="comments">Type a message:</label> 
                     <textarea id="comments" name="comments" cols="30" rows="10" placeholder="Write your message here"></textarea>
                     <input type="submit" value="Submit">
                 </form>
-                <address> <!--preguntar si esta bien que acá vaya adress. P/ seccion de contacto usar <address> en lugar de <p>-->
+                <address> 
                     <div class="contact-address-items">
                         <img src="assets/icons/address.svg" alt="Address">
                         <p>
@@ -195,7 +194,7 @@
                 </address> 
                 <div class="contact-footer">
                     <div class="contact-footer-item">
-                        <h3>products</h3>
+                        <h3 id="products">products</h3>
                         <ol>
                             <li>
                                 <a href="#homepage">features</a>
@@ -212,7 +211,7 @@
                         </ol>
                     </div>
                     <div class="contact-footer-item">
-                        <h3>business</h3>
+                        <h3 id="business">business</h3>
                         <ol>
                             <li>
                                 <a href="#homepage">about us</a>
@@ -229,7 +228,7 @@
                         </ol>
                     </div>
                     <div class="contact-footer-item">
-                        <h3>support</h3>
+                        <h3 id="support">support</h3>
                         <ol>
                             <li>
                                 <a href="#homepage">help</a>

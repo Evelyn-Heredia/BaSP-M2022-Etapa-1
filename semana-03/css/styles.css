@@ -60,23 +60,28 @@ h1{
     margin-top: 5%;
     padding: 20px;
     font-size: 40px;
-    font-weight: 800 bold; 
+    font-weight: 800; 
     color: #ffffff;
     text-transform: uppercase;
 }
 h2{
     margin: auto;
     font-size: 40px;
-    font-weight: 700 bold;
+    font-weight: 700;
     line-height: 46.88px;
     margin: 10px 30px;
     }
 h3{
-    width: 33%;
     margin: auto;
     font-size: 26px;
+    font-weight: 700;
+    line-height: 31px;
+    }
+.contact h3{
+    width: 33%;
+    font-size: 26px;
     text-align: left;
-    font-weight: 700 bold;
+    font-weight: 700;
     line-height: 31px;
 }
 footer{
@@ -88,7 +93,7 @@ footer{
     background-color: #373867;
     list-style-type: none;
     font-size: 14px;
-    font-weight: 700 bold;
+    font-weight: 700;
     line-height: 15px;
     color: #aace98;
 }
@@ -121,7 +126,7 @@ footer ul li{
     padding: 40px 15px 0px 10px;
     color: #373867;
     font-size: 30px;
-    font-weight: 700 bold;
+    font-weight: 700;
     text-align: left;
     text-decoration: underline;
 }
@@ -151,7 +156,7 @@ main section{
 .wh-is-trackgenix{
     padding-top: 110px;
 }
-.wh-is-trackgenix article{
+.article-what-is{
     display: inline-block;
     margin: auto;
     width: 600px;
@@ -257,13 +262,20 @@ form{
     color: #373867;
     text-transform: capitalize;
 }
-input, select, textarea {
+input, select {
     width: 260px;
-    height: 32px;
+    height: 30px;
+    border-radius: 4px;
+    margin: 6px 0;
+    border: 1px solid #373867;
+    
+}
+textarea{ 
+    width: 260px;
+    height: 90px;
     border-radius: 4px;
     margin: 8px 0;
     border: 1px solid #373867;
-    
 }
 input[type=submit] {
     width: 260px;
@@ -322,4 +334,13 @@ input[type=submit] {
 .contact-footer-item ol {
     display: inline-block;
     text-align: left;
+}
+#business {
+    margin-right: 28%;    
+}
+#products{
+    margin-left: 33%;
+}
+#support{
+    margin-right: 27%;
 }
