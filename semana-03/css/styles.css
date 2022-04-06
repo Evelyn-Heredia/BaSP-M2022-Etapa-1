@@ -4,34 +4,34 @@
 body {
     background-color: #ffffff;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
     font-size: 15px;
+    font-weight: 400;
     line-height: 24px;
+    color: #373867;
     text-transform: capitalize;
     text-align: center;
-    color: #373867;
 }
 header {
     position: fixed;
-    z-index: 100;
     width: 100%;
     height: 9.5%;
     min-height: 71px;
-    top: 0; 
+    top: 0;
+    z-index: 100;
     background-color: #373867;
 }
 aside {
     position: fixed;
     width: 252px;
     height: auto;
-    left: 0;
     top: 9.5%;
+    left: 0;
     bottom: 10%;
     background-color: #aace98;
 }
 main {
-    margin-right: 0;
     margin-left: 252px;
+    margin-right: 0;
 }
 footer {
     position: fixed;
@@ -40,7 +40,6 @@ footer {
     padding: 2px;
     bottom: 0;
     background-color: #373867;
-    list-style-type: none;
     font-size: 14px;
     font-weight: 700;
     line-height: 15px;
@@ -48,8 +47,8 @@ footer {
 }
 aside ul {
     width: 240px;
-    bottom: 50%;
     padding: 6px;
+    bottom: 50%;
     text-align: left;
 }
 aside a {
@@ -58,11 +57,9 @@ aside a {
     margin: 25px 2px;
     padding: 7px 4px;
     background-color: #ffffff;
-    box-shadow: 0px 3px 0px #373867;
-    color: #373867;
     font-size: 17px;
-    font-weight: 400;
     text-decoration: none;
+    box-shadow: 0px 3px 0px #373867;
 }
 main section {
     display: inline-block;
@@ -82,12 +79,11 @@ h1 {
     text-transform: uppercase;
 }
 h2 {
-    margin: auto;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 46.88px;
     margin: 10px 30px;
-    }
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 47px;
+}
 h3 {
     margin: auto;
     font-size: 26px;
@@ -97,26 +93,25 @@ h3 {
 form {
     display: inline-block;
     width: 260px;
-    margin: 0px 80px 0px 0px;
+    padding-right: 300px;
     vertical-align: top;
     text-align: left;
-    color: #373867;
     text-transform: capitalize;
 }
 input, select, textarea {
     width: 260px;
     height: 30px;
-    border-radius: 4px;
     margin: 6px 0;
     border: 1px solid #373867;
+    border-radius: 4px;
 }
 textarea { 
     height: 100px;
 }
 input[type=submit] {
     width: 260px;
-    background-color: #aace98;
     margin: 8px 0px;
+    background-color: #aace98;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -128,27 +123,22 @@ footer ul li {
     padding-top: 5px;    
 }
 .header-logo {
+    display: inline-block;
     width: 64px;
     height: 64px;
-    display: inline-block;
     margin: auto;
 }
 .btn-sign-up {
     display: block;
     width: 65px;
     height: 35px;
-    border-radius: 5px;
-    margin-top: -49px;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 93%;
-    border: 2px solid #373867;
+    margin: -49px 0 0 93%;
     background-color: #aace98;
-    color: #373867;
+    border: 2px solid #373867;
+    border-radius: 5px;
 }
 .shortcuts {
     padding: 40px 15px 0px 10px;
-    color: #373867;
     font-size: 30px;
     font-weight: 700;
     text-align: left;
@@ -158,14 +148,14 @@ footer ul li {
     padding-top: 90px;
     padding-bottom: 78px;
     background-image: url(../assets/homepage-background.png);
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .home-pg-logo {
     display: inline-block;
-    margin-bottom: 5%;
     width: 400px;
     height: 400px;
+    margin-bottom: 5%;
     vertical-align: middle;
 }
 .wh-is-trackgenix {
@@ -173,32 +163,24 @@ footer ul li {
 }
 .article-what-is {
     display: inline-block;
-    margin: auto;
     width: 600px;
+    margin: auto;
     vertical-align: top;
 }
 .wh-is-trackgenix h2 {
     margin: 10px 30px;
 }
-
-
-
-
-
-
 .contact h3 {
     width: 33%;
     font-size: 26px;
-    text-align: left;
     font-weight: 700;
     line-height: 31px;
+    text-align: left;
 }
 .wh-is-trackgenix p {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 23.44px;
-    text-align: justify;
     margin: 50px;
+    font-size: 20px;
+    text-align: justify;
 }
 .wh-is-trackgenix img {
     width: 400px;
@@ -218,8 +200,8 @@ footer ul li {
 }
 .choose-me div h3 {
     margin:auto;
-    text-align: left;
     padding-left: 95px;
+    text-align: left;
 }
 .choose-me div img {
     display: inline-block;
@@ -263,18 +245,18 @@ footer ul li {
     height: 216px;
     margin: auto;
     padding-top: 10px;
+    vertical-align: middle;
     font-size: 20px;
     text-align: justify;
-    vertical-align: middle;
 }
 .contact {
-    text-align: center;
     padding-top: 73px;
+    text-align: center;
 }
 .contact form label {
-    text-align: left;
-    font-size: 14px;
+    width: 260px;
     line-height: 16px;
+    text-align: left;
 }
 .contact address {
     display: inline-block;
@@ -319,19 +301,18 @@ footer ul li {
 }
 .contact-footer-item ol li {
     list-style-type: decimal;
-    list-style-position: inside;
 }
 .contact-footer a {
     color: #373867;
-    text-decoration: none;
     text-transform: capitalize;
+    text-decoration: none;
 }
 #products {
-    margin-left: 33%;
+    margin-left: 32%;
 }
 #business {
-    margin-right: 28%;    
+    margin-right: 29%;    
 }
 #support {
-    margin-right: 27%;
+    margin-right: 28%;
 }
