@@ -14,7 +14,7 @@ HTML document was created and edited in order to set the webpage structure.
 CSS document was created and edited in order to give style to the HTML document created on week 02.
 ## Week 04
 Responsive layout created and edited resorting to HTML and CSS files from previous weeks. Mobile First approach applied.
-GitHub Pages [link](https://evelyn-heredia.github.io/BaSP-M2022-Etapa-1/)
+GitHub Pages [link](https://evelyn-heredia.github.io/BaSP-M2022-Etapa-1/semana-04/index.html)
 ## Author
 Evelyn Heredia.
 ## Note
