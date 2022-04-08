@@ -314,3 +314,8 @@ footer ul li {
 #support {
     margin-right: 28%;
 }
+@media only screen and (max-width: 768px) {
+    aside {
+      display: none;
+    }
+  }
