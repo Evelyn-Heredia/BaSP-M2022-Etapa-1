@@ -1,0 +1,32 @@
+aside {
+    position: fixed;
+    width: 252px;
+    height: auto;
+    top: 9.5%;
+    left: 0;
+    bottom: 10%;
+    background-color: #aace98;
+}
+aside ul {
+    width: 240px;
+    padding: 6px;
+    bottom: 50%;
+    text-align: left;
+}
+aside a {
+    display: block;
+    width: 225px;
+    margin: 25px 2px;
+    padding: 7px 4px;
+    background-color: #ffffff;
+    font-size: 17px;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px #373867;
+}
+.shortcuts {
+    padding: 40px 15px 0px 10px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: underline;
+}

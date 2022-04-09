@@ -1,0 +1,17 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #373867;
+    min-height: 70px;
+}
+.header-logo{
+    width: 60px;
+}
+.btn-sign-up{
+    width: 65px;
+    height: 35px;
+    background-color: #aace98;
+    border: 2px solid #373867;
+    border-radius: 5px;    
+}

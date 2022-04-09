@@ -1,0 +1,58 @@
+.homepg{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/homepage-background.png);
+    background-size: 100%;
+    background-position: center;
+}
+.home-pg-logo{
+    width: 60%;
+}
+.wh-is-trackgenix{
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.wh-is-trackgenix img{
+    width: 60%;
+    margin: 15px;
+}
+.wh-is-trackgenix p {
+    margin: 10px;
+}
+.choose-me{
+    background-color: darkorange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.choose-me div{
+    width: 100%;
+    margin-bottom: 3%;
+}
+.choose-me div h3{
+    text-align: center;
+}
+.choose-me div img{
+    width: 18%;
+}
+.choose-me div p{
+    width: 70%;
+    padding: 5px;
+    text-align: justify;
+    font-weight: 300;
+    line-height: 18px;
+}
+.choose-me-item-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

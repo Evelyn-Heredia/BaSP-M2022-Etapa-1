@@ -1,7 +1,4 @@
-* {
-    box-sizing: border-box;
-}
-body {
+body{
     background-color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
@@ -9,313 +6,29 @@ body {
     line-height: 24px;
     color: #373867;
     text-transform: capitalize;
-    text-align: center;
-}
-header {
-    position: fixed;
-    width: 100%;
-    height: 9.5%;
-    min-height: 71px;
-    top: 0;
-    z-index: 100;
-    background-color: #373867;
-}
-aside {
-    position: fixed;
-    width: 252px;
-    height: auto;
-    top: 9.5%;
-    left: 0;
-    bottom: 10%;
-    background-color: #aace98;
-}
-main {
-    margin-left: 252px;
-    margin-right: 0;
-}
-footer {
-    position: fixed;
-    width: 100%;
-    height: 10%;
-    padding: 2px;
-    bottom: 0;
-    background-color: #373867;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 15px;
-    color: #aace98;
-}
-aside ul {
-    width: 240px;
-    padding: 6px;
-    bottom: 50%;
-    text-align: left;
-}
-aside a {
-    display: block;
-    width: 225px;
-    margin: 25px 2px;
-    padding: 7px 4px;
-    background-color: #ffffff;
-    font-size: 17px;
     text-decoration: none;
-    box-shadow: 0px 3px 0px #373867;
 }
-main section {
-    display: inline-block;
-    width: 100%;
-    height: 25%;
-    margin: auto;
-    padding-top: 60px;
-    vertical-align: middle;
-    align-items: center;
-}
-h1 {
-    margin-top: 5%;
-    padding: 20px;
-    font-size: 40px;
+h1{
+    margin-top: 3%;
+    font-size: 30px;
     font-weight: 800; 
     color: #ffffff;
     text-transform: uppercase;
 }
 h2 {
-    margin: 10px 30px;
+    margin: 3% 0%;
     font-size: 30px;
     font-weight: 700;
-    line-height: 47px;
+    line-height: 30px;
 }
 h3 {
-    margin: auto;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 31px;
-}
-form {
-    display: inline-block;
-    width: 260px;
-    padding-right: 100px;
-    box-sizing: content-box;
-    vertical-align: top;
-    text-align: left;
-    text-transform: capitalize;
-}
-input, select, textarea {
-    width: 260px;
-    height: 30px;
-    margin: 6px 0;
-    border: 1px solid #373867;
-    border-radius: 4px;
-}
-textarea { 
-    height: 100px;
-}
-input[type=submit] {
-    width: 260px;
-    margin: 8px 0px;
-    background-color: #aace98;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-footer ul li {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    padding-top: 5px;    
-}
-.header-logo {
-    display: inline-block;
-    width: 64px;
-    height: 64px;
-    margin: auto;
-}
-.btn-sign-up {
-    display: block;
-    width: 65px;
-    height: 35px;
-    margin: -49px 0 0 93%;
-    background-color: #aace98;
-    border: 2px solid #373867;
-    border-radius: 5px;
-}
-.shortcuts {
-    padding: 40px 15px 0px 10px;
-    font-size: 30px;
-    font-weight: 700;
-    text-align: left;
-    text-decoration: underline;
-}
-.homepg {
-    padding-top: 90px;
-    padding-bottom: 78px;
-    background-image: url(../assets/homepage-background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.home-pg-logo {
-    display: inline-block;
-    width: 400px;
-    height: 400px;
-    margin-bottom: 5%;
-    vertical-align: middle;
-}
-.wh-is-trackgenix {
-    padding-top: 110px;
-}
-.article-what-is {
-    display: inline-block;
-    width: 600px;
-    margin: auto;
-    vertical-align: top;
-}
-.wh-is-trackgenix h2 {
-    margin: 10px 30px;
-}
-.contact h3 {
-    width: 33%;
-    text-align: left;
-}
-.wh-is-trackgenix p {
-    margin: 50px;
-    font-size: 20px;
-    text-align: justify;
-}
-.wh-is-trackgenix img {
-    width: 400px;
-    height: auto;
-    margin-right: 0;
-    margin-left: 35px;
-    vertical-align: top;
-}
-.choose-me {
-    padding-top: 95px;
-}
-.choose-me div {
-    display: inline-block;
-    width: 450px;
-    margin: 5px 70px;
-    text-align: justify;
-}
-.choose-me div h3 {
-    margin:auto;
-    padding-left: 95px;
-    text-align: left;
-}
-.choose-me div img {
-    display: inline-block;
-    width: 92.84px;
-    height: 92.84px;
-    margin-left: 0;
-    margin-right: 5px;
-    vertical-align: top;
-}
-.choose-me div p {
-    display: inline-block;
-    width: 340px;
-    height: 92.84px;
-    margin-right: 0;
-}
-.about-us {
-    padding-top: 100px;
-    padding-bottom: 40px;
-}
-.about-us div {
-    display: inline-block;
-    width: 1000px;
-    margin: 17px auto;
-}
-.about-us img {
-    display: inline-block;
-    width: 354px;
-    vertical-align: middle;
-}
-.about-us-img1 {
-    margin-right: 0;
-    margin-left: 10px;
-}
-.about-us-img2 {
-    margin-left: 0;
-    margin-right: 10px;
-}
-.about-us p{
-    display: inline-block;
-    width: 626px;
-    height: 216px;
-    margin: auto;
-    padding-top: 10px;
-    vertical-align: middle;
-    font-size: 20px;
-    text-align: justify;
-}
-.contact {
-    padding-top: 73px;
-    text-align: center;
-}
-.contact form label {
-    width: 300px;
-    line-height: 16px;
-    text-align: left;
-}
-.contact address {
-    display: inline-block;
-    width: 590px;
-    right: 0;
-    vertical-align: top;
-}
-.contact-address-items {
-    display: inline-block;
-    width: 450px;
-    height: 160px;
-    margin: 0px 0px 5px 107px;
-    text-align: justify;
-}
-.contact-address-items img {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    margin-left: 0;
-    margin-right: 8px;
-    margin-bottom: 18px;
-}
-.contact-address-items p {
-    display: inline-block;
-    width: 326px;
-    height: 200px;
-    margin-right: 0;
-}
-.contact-footer {
-    width: 100%;
-    height: 250px;
-    bottom: 0px;
-}
-.contact-footer-item {
-    display: inline-block;
-    width: 33%;
-    margin: auto;
-}
-.contact-footer-item ol {
-    display: inline-block;
-    text-align: left;
-}
-.contact-footer-item ol li {
-    list-style-type: decimal;
-}
-.contact-footer a {
-    color: #373867;
-    text-transform: capitalize;
-    text-decoration: none;
-}
-#products {
-    margin-left: 32%;
-}
-#business {
-    margin-right: 29%;    
-}
-#support {
-    margin-right: 28%;
 }
 @media only screen and (max-width: 768px) {
     aside {
       display: none;
     }
   }
+  
