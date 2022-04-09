@@ -1,5 +1,4 @@
 .homepg{
-    background-color: blueviolet;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,18 +17,12 @@
     justify-content: center;
     text-align: center;
 }
-.wh-is-trackgenix,{
-    background-color: yellow;
-}
 .wh-is-trackgenix img{
     width: 60%;
     margin: 15px;
 }
 .wh-is-trackgenix p {
     margin: 10px;
-}
-.choose-me{
-    background-color: darkorange;
 }
 .choose-me div, .contact div{
     width: 100%;
@@ -50,9 +43,6 @@
     align-items: center;
     justify-content: space-evenly;
 }
-.about-us{
-    background-color: lightseagreen;
-}
 .about-us div img{
     width: 65%;
     margin: 3%;
@@ -68,9 +58,6 @@
 .about-us-container-2{
     flex-direction: column-reverse;
     text-align: right;
-}
-.contact{
-    background-color: lightcoral;
 }
 .contact form{
     display: flex;
@@ -101,23 +88,16 @@ input[type=submit] {
 .contact-footer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     text-align: left;
     top: 3%;
-}
-.contact-footer h3{
-    padding-left: 40%;
+    padding-left: 75%;
 }
 .contact-footer-item ol{
-    display: flex;
-    flex-direction: column;
-    padding-left: 44%;
-    list-style-type: decimal;
-
+    list-style: inside decimal;
 }
 .contact-footer-item ol li a{
     text-decoration: none;
-    text-align: left;
     color: #373867;
-    }
+}
