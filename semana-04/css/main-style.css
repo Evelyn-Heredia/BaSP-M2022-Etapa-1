@@ -76,6 +76,10 @@
     display: flex;
     flex-direction: column;
 }
+.contact form label {
+    line-height: 16px;
+    text-align: left;
+}
 input, select, textarea {
     width: 260px;
     height: 30px;
@@ -94,3 +98,26 @@ input[type=submit] {
     border-radius: 5px;
     cursor: pointer;
 }
+.contact-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    top: 3%;
+}
+.contact-footer h3{
+    padding-left: 40%;
+}
+.contact-footer-item ol{
+    display: flex;
+    flex-direction: column;
+    padding-left: 44%;
+    list-style-type: decimal;
+
+}
+.contact-footer-item ol li a{
+    text-decoration: none;
+    text-align: left;
+    color: #373867;
+    }
