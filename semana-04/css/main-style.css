@@ -11,13 +11,15 @@
 .home-pg-logo{
     width: 60%;
 }
-.wh-is-trackgenix{
-    background-color: yellow;
+.wh-is-trackgenix, .choose-me, .about-us, .contact{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+.wh-is-trackgenix,{
+    background-color: yellow;
 }
 .wh-is-trackgenix img{
     width: 60%;
@@ -28,31 +30,67 @@
 }
 .choose-me{
     background-color: darkorange;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 }
-.choose-me div{
+.choose-me div, .contact div{
     width: 100%;
     margin-bottom: 3%;
 }
-.choose-me div h3{
-    text-align: center;
-}
-.choose-me div img{
+.choose-me div img, .contact div img{
     width: 18%;
 }
-.choose-me div p{
+.choose-me div p, .contact div p{
     width: 70%;
     padding: 5px;
     text-align: justify;
     font-weight: 300;
     line-height: 18px;
 }
-.choose-me-item-container{
+.choose-me-item-container, .contact-address-items{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+.about-us{
+    background-color: lightseagreen;
+}
+.about-us div img{
+    width: 65%;
+    margin: 3%;
+}
+.about-us-container-1, .about-us-container-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0% 3%;
+    text-align: left;
+}
+.about-us-container-2{
+    flex-direction: column-reverse;
+    text-align: right;
+}
+.contact{
+    background-color: lightcoral;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+}
+input, select, textarea {
+    width: 260px;
+    height: 30px;
+    margin: 6px 0;
+    border: 1px solid #373867;
+    border-radius: 4px;
+}
+textarea { 
+    height: 100px;
+}
+input[type=submit] {
+    width: 260px;
+    margin: 8px 0px 26px 0px;
+    background-color: #aace98;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
