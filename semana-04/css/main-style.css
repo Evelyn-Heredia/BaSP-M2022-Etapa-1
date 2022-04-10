@@ -1,21 +1,22 @@
-.homepg{
+main{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../assets/homepage-background.png);
-    background-size: 100%;
-    background-position: center;
 }
-.home-pg-logo{
-    width: 60%;
-}
-.wh-is-trackgenix, .choose-me, .about-us, .contact{
+.homepg, .wh-is-trackgenix, .choose-me, .about-us, .contact{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+.homepg{
+    min-width: 100%;
+    background-image: url(../assets/homepage-background.png);
+    background-size: 100%;
+    background-position: center;
+}
+.home-pg-logo{
+    width: 40%;
 }
 .wh-is-trackgenix img{
     width: 60%;

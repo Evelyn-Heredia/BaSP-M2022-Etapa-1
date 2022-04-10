@@ -5,6 +5,7 @@ footer{
     align-items: center;
     min-height: 80px;
     padding: 2% 0%;
+    bottom: 0;
     background-color: #373867;
     color: #aace98;
 }
