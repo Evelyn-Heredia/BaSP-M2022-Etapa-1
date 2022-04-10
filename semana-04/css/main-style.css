@@ -10,7 +10,6 @@ main{
     text-align: center;
 }
 .homepg{
-    min-width: 100%;
     background-image: url(../assets/homepage-background.png);
     background-size: 100%;
     background-position: center;
@@ -89,14 +88,16 @@ input[type=submit] {
 .contact-footer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
     align-items: center;
     text-align: left;
     top: 3%;
-    padding-left: 75%;
+}
+.contact-footer-item h3{
+    margin-left: 34%;
 }
 .contact-footer-item ol{
     list-style: inside decimal;
+    margin-left: 34%;
 }
 .contact-footer-item ol li a{
     text-decoration: none;
