@@ -1,10 +1,14 @@
 header{
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    top: 0;
+    right: 0;
+    left: 0;
     padding: 0 5%;
     background-color: #373867;
-    min-height: 70px;
+    min-height: 72px;
 }
 .header-menu{
     width: 20px;

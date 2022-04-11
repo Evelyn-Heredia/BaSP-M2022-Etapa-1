@@ -1,15 +1,19 @@
 main{
     display: flex;
     flex-direction: column;
+    margin-top: 71px;
+    padding-bottom: 105px;
 }
 .homepg, .wh-is-trackgenix, .choose-me, .about-us, .contact{
     display: flex;
-    flex-direction: column;
+    /*antes tenian flex-direction: column*/
+    flex-wrap: wrap; 
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 .homepg{
+    flex-direction: column;
     background-image: url(../assets/homepage-background.png);
     background-size: 100%;
     background-position: center;
@@ -84,6 +88,9 @@ input[type=submit] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.contact div{
+    bottom: 105px;
 }
 .contact-footer{
     display: flex;
