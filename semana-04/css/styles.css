@@ -1,33 +1,32 @@
 body{
-    margin: 0;
-    padding: 0;
     background-color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 20px;
     color: #373867;
     text-align: center;
     text-transform: capitalize;
     text-decoration: none;
 }
 h1{
-    margin-top: 3%;
-    font-size: 30px;
-    font-weight: 800; 
+    margin-bottom: 20%;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 47px; 
     color: #ffffff;
     text-transform: uppercase;
 }
 h2 {
-    margin: 3% 0%;
+    margin: 2%;
     font-size: 30px;
     font-weight: 700;
-    line-height: 30px;
+    line-height: 46px;
 }
 h3 {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 700;
-    line-height: 31px;
+    line-height: 30px;
 }
 /*< 480px -> MOBILE (1 columna)-no sidebar
 entre 480px y 768px -> TABLET (2 columnas)-no sidebar
@@ -37,24 +36,10 @@ pueden mantener algunas cosas de TABLET
 (por ejemplo algunos tamaños de letra)
 > 1024px -> DESKTOP (3 columnas)
 */
-@media only screen and (max-width: 768px) {
-    aside {
-      display: none;
-    }
-}
-@media only screen and (max-width: 768px){
-    aside {
-        display: none;
-      }
-    .homepg, .wh-is-trackgenix, .choose-me, .about-us, .contact{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-   
-}
-@media only screen and (min-width: 1024px) {
-    a
-  }
-  
+
+
+
+/*ancho-maximo: pixeles
+min-width:480
+mins-width:780
+direction columna, wrap*/

@@ -4,21 +4,23 @@ main{
     margin-top: 71px;
     padding-bottom: 105px;
 }
-.homepg, .wh-is-trackgenix, .choose-me, .about-us, .contact{
+.homepg, .wh-is-trackgenix, .choose-me, .about-us, .contact, .contact-address{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    border-bottom: solid 60px #49a37b;
 }
 .homepg{
-    flex-direction: column;
     background-image: url(../assets/homepage-background.png);
     background-size: 100%;
+    background-size: cover;
     background-position: center;
+    height: 85vh;
+    border-bottom: 0;
 }
 .home-pg-logo{
-    width: 40%;
+    width: 60%;
 }
 .wh-is-trackgenix img{
     width: 50%;
@@ -27,28 +29,23 @@ main{
 .wh-is-trackgenix p {
     margin: 10px;
 }
-.choose-me div, .contact div{
-    width: 100%;
-    margin-bottom: 3%;
-}
-.choose-me div img, .contact div img{
-    width: 15%;
-}
-.choose-me div p, .contact div p{
-    width: 70%;
-    padding: 5px;
-    text-align: justify;
-    font-weight: 300;
-    line-height: 18px;
-}
 .choose-me-item-container, .contact-address-items{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-evenly;
+    text-align: left;
+    margin: 5%;
+}
+.choose-me-item-container p {
+    text-align: justify;
+}
+.choose-me div img, .contact div img{
+    width: 18%;
+    margin-right: 3%;
 }
 .about-us div img{
-    width: 65%;
-    margin: 3%;
+    width: 85%;
+    margin: 4% 0;
 }
 .about-us-container-1, .about-us-container-2{
     display: flex;
@@ -62,6 +59,9 @@ main{
     flex-direction: column-reverse;
     text-align: right;
 }
+.contact{
+    border-bottom: 0;
+}
 .contact form{
     display: flex;
     flex-direction: column;
@@ -69,6 +69,9 @@ main{
 .contact form label {
     line-height: 16px;
     text-align: left;
+}
+.contact address{
+    border-bottom: solid 60px #49a37b;
 }
 input, select, textarea {
     width: 260px;
@@ -88,22 +91,18 @@ input[type=submit] {
     border-radius: 5px;
     cursor: pointer;
 }
-.contact div{
-    bottom: 105px;
-}
 .contact-footer{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: left;
-    top: 3%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
+    text-align: justify;
 }
-.contact-footer-item h3{
-    margin-left: 34%;
+.contact-footer-item{
+    margin-bottom: 30%;
 }
 .contact-footer-item ol{
     list-style: inside decimal;
-    margin-left: 34%;
 }
 .contact-footer-item ol li a{
     text-decoration: none;

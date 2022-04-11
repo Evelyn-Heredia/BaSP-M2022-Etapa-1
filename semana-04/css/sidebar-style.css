@@ -1,10 +1,11 @@
 aside {
     position: fixed;
+    display: none;
     width: 252px;
     height: auto;
-    top: 9.5%;
+    top: 71px;
     left: 0;
-    bottom: 10%;
+    bottom: 104px;
     background-color: #aace98;
 }
 aside ul {
@@ -29,4 +30,9 @@ aside a {
     font-weight: 700;
     text-align: left;
     text-decoration: underline;
+}
+@media only screen and (min-width: 768px) {
+    aside {
+      display: block;
+    }
 }
