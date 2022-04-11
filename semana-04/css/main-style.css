@@ -6,8 +6,7 @@ main{
 }
 .homepg, .wh-is-trackgenix, .choose-me, .about-us, .contact{
     display: flex;
-    /*antes tenian flex-direction: column*/
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -22,7 +21,7 @@ main{
     width: 40%;
 }
 .wh-is-trackgenix img{
-    width: 60%;
+    width: 50%;
     margin: 15px;
 }
 .wh-is-trackgenix p {
@@ -33,7 +32,7 @@ main{
     margin-bottom: 3%;
 }
 .choose-me div img, .contact div img{
-    width: 18%;
+    width: 15%;
 }
 .choose-me div p, .contact div p{
     width: 70%;

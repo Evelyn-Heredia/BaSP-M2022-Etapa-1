@@ -42,10 +42,16 @@ pueden mantener algunas cosas de TABLET
       display: none;
     }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px){
     aside {
         display: none;
       }
+    .homepg, .wh-is-trackgenix, .choose-me, .about-us, .contact{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
    
 }
 @media only screen and (min-width: 1024px) {
