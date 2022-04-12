@@ -4,6 +4,24 @@ main{
     margin-top: 71px;
     padding-bottom: 105px;
 }
+input, select, textarea {
+    width: 260px;
+    height: 30px;
+    margin: 6px 0;
+    border: 1px solid #373867;
+    border-radius: 4px;
+}
+textarea { 
+    height: 100px;
+}
+input[type=submit] {
+    width: 260px;
+    margin: 8px 0px 26px 0px;
+    background-color: #aace98;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .homepg, .wh-is-trackgenix, .choose-me, .about-us, .contact, .contact-address{
     display: flex;
     flex-direction: column;
@@ -73,23 +91,11 @@ main{
 .contact address{
     border-bottom: solid 60px #49a37b;
 }
-input, select, textarea {
-    width: 260px;
-    height: 30px;
-    margin: 6px 0;
-    border: 1px solid #373867;
-    border-radius: 4px;
-}
-textarea { 
-    height: 100px;
-}
-input[type=submit] {
-    width: 260px;
-    margin: 8px 0px 26px 0px;
-    background-color: #aace98;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.contact .flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .contact-footer{
     display: flex;
@@ -107,4 +113,37 @@ input[type=submit] {
 .contact-footer-item ol li a{
     text-decoration: none;
     color: #373867;
+}
+@media only screen and (min-width: 480px) {
+    .wh-is-trackgenix, .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .about-us-container-1, .about-us-container-2{
+        flex-direction: row;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    .contact .flex-container {
+        border-bottom: solid 60px #49a37b;
+    }
+    .contact address {
+        border-bottom: 0;
+    }
+    .contact-footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    .contact-footer-item ol {
+        margin: 40% 4%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    main {
+        margin-left: 252px;
+    }
 }

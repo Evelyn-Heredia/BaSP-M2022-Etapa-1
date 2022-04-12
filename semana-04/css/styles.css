@@ -10,7 +10,7 @@ body{
     text-decoration: none;
 }
 h1{
-    margin-bottom: 20%;
+    margin-bottom: 15px;
     font-size: 40px;
     font-weight: 800;
     line-height: 47px; 
@@ -28,6 +28,17 @@ h3 {
     font-weight: 700;
     line-height: 30px;
 }
+@media only screen and (min-width: 480px) {
+    .choose-me p {
+        font-size: 10px
+        line-height: 15px;
+    }
+    .choose-me h3 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
 /*< 480px -> MOBILE (1 columna)-no sidebar
 entre 480px y 768px -> TABLET (2 columnas)-no sidebar
 
