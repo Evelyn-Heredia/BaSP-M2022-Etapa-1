@@ -1,31 +1,38 @@
 aside {
     position: fixed;
     display: none;
-    width: 252px;
-    height: auto;
-    top: 71px;
+    min-width: 260px;
+    height: 90%;
+    top: 72px;
     left: 0;
-    bottom: 104px;
     background-color: #aace98;
 }
 aside ul {
-    width: 240px;
-    padding: 6px;
-    bottom: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 230px;
+    flex-wrap: wrap;
     text-align: left;
 }
-aside a {
-    display: block;
-    width: 225px;
-    margin: 25px 2px;
-    padding: 7px 4px;
+aside ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5% 0%;
+    height: 30px;
     background-color: #ffffff;
-    font-size: 17px;
-    text-decoration: none;
     box-shadow: 0px 3px 0px #373867;
 }
+aside a {
+    margin-left: 10px;
+    font-size: 17px;
+    text-decoration: none;
+    color: #373867;
+}
 .shortcuts {
-    padding: 40px 15px 0px 10px;
+    margin-top: 15%;
+    margin-bottom: 5%;
     font-size: 30px;
     font-weight: 700;
     text-align: left;
@@ -36,5 +43,10 @@ aside a {
         position: fixed;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    h1 {
+        font-size: 40px;
     }
 }

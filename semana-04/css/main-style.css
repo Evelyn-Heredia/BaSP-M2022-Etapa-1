@@ -1,6 +1,8 @@
 main{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 71px;
     padding-bottom: 105px;
 }
@@ -8,8 +10,13 @@ input, select, textarea {
     width: 260px;
     height: 30px;
     margin: 6px 0;
-    border: 1px solid #373867;
+    border: 1px solid rgb(55, 56, 103, 1);
     border-radius: 4px;
+    color: rgb(55, 56, 103, 1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+
 }
 textarea { 
     height: 100px;
@@ -22,70 +29,107 @@ input[type=submit] {
     border-radius: 5px;
     cursor: pointer;
 }
-.homepg, .wh-is-trackgenix, .choose-me, .about-us, .contact, .contact-address{
+.homepg{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom: solid 60px #49a37b;
-}
-.homepg{
     background-image: url(../assets/homepage-background.png);
-    background-size: 100%;
     background-size: cover;
     background-position: center;
-    height: 85vh;
-    border-bottom: 0;
+    height: 83vh;
+    border-top: none;
+}
+.wh-is-trackgenix, .choose-me, .about-us, .contact, .contact-address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: solid 60px #49a37b;
+    text-align: center;
+}
+.subtitle {
+    color: rgba(55, 56, 103, 0.7);
 }
 .home-pg-logo{
-    width: 60%;
+    max-width: 55%;
+}
+.wh-is-trackgenix {
+    width: 90%;
+    margin-top: 60px;
+    border-top: none;
+}
+.article-what-is {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.article-what-is p {
+    margin-bottom: 25px;
+    text-align: center;
+}
+.subtitle {
+    margin-bottom: 30px;
 }
 .wh-is-trackgenix img{
-    width: 50%;
+    max-width: 80%;
     margin: 15px;
 }
-.wh-is-trackgenix p {
-    margin: 10px;
+.choose-me h2, .about-us h2 {
+    margin: 30px 10px 0;
 }
 .choose-me-item-container, .contact-address-items{
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: left;
-    margin: 5%;
+    margin: 15% 5%;
+    font-size: 18px;
+    font-weight: 21px;
 }
 .choose-me-item-container p {
     text-align: justify;
 }
-.choose-me div img, .contact div img{
-    width: 18%;
-    margin-right: 3%;
+.choose-me-item-container div h3{
+    font-size: 22px;
+    font-weight: 26px;
 }
-.about-us div img{
-    width: 85%;
-    margin: 4% 0;
+.choose-me div img, .contact div img{
+    width: 23%;
+    margin-right: 3%;
 }
 .about-us-container-1, .about-us-container-2{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    margin: 0% 3%;
+    margin: 0% 5%;
     text-align: left;
 }
 .about-us-container-2{
     flex-direction: column-reverse;
-    text-align: right;
 }
-.contact{
-    border-bottom: 0;
+.about-us-container-1 p{
+    text-align: left;
+    margin-top: 60px;
+}
+.about-us-container-2 p{
+    text-align: right;
+    margin-top: 60px;
+}
+.about-us div img{
+    width: 85%;
+    margin: 10% 0;
 }
 .contact form{
     display: flex;
     flex-direction: column;
 }
 .contact form label {
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
     text-align: left;
 }
 .contact address{
@@ -96,6 +140,16 @@ input[type=submit] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.contact-address-items {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
 }
 .contact-footer{
     display: flex;
@@ -118,11 +172,15 @@ input[type=submit] {
     .wh-is-trackgenix, .flex-container {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .article-what-is {
+        margin: 0 8%;
     }
     .about-us-container-1, .about-us-container-2{
         flex-direction: row;
-        justify-items: center;
+        align-items: flex-start;
         justify-content: space-between;
     }
     .contact .flex-container {
