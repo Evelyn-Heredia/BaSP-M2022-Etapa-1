@@ -28,29 +28,4 @@ h3 {
     font-weight: 700;
     line-height: 36px;
 }
-@media only screen and (min-width: 480px) {
-    .choose-me p {
-        font-size: 10px
-        line-height: 15px;
-    }
-    .choose-me h3 {
-        font-size: 15px;
-        line-height: 20px;
-    }
-}
 
-/*< 480px -> MOBILE (1 columna)-no sidebar
-entre 480px y 768px -> TABLET (2 columnas)-no sidebar
-
-entre 768px y 1024px -> DESKTOP (3 columnas),
-pueden mantener algunas cosas de TABLET 
-(por ejemplo algunos tamaños de letra)
-> 1024px -> DESKTOP (3 columnas)
-*/
-
-
-
-/*ancho-maximo: pixeles
-min-width:480
-mins-width:780
-direction columna, wrap*/

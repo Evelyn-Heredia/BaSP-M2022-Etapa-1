@@ -7,7 +7,7 @@ main{
     padding-bottom: 105px;
 }
 input, select, textarea {
-    width: 260px;
+    width: 95%;
     height: 30px;
     margin: 6px 0;
     border: 1px solid rgb(55, 56, 103, 1);
@@ -22,7 +22,7 @@ textarea {
     height: 100px;
 }
 input[type=submit] {
-    width: 260px;
+    width: 95%;
     margin: 8px 0px 26px 0px;
     background-color: #aace98;
     border: none;
@@ -133,6 +133,8 @@ input[type=submit] {
     text-align: left;
 }
 .contact address{
+    display: flex;
+    flex-direction: column;
     border-bottom: solid 60px #49a37b;
 }
 .contact .flex-container{
@@ -145,11 +147,15 @@ input[type=submit] {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
+    width: 70%;
     align-items: center;
     text-align: left;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 22px;
+}
+.contact-address-items p, .contact-address-items div {
+    width: 80%;
 }
 .contact-footer{
     display: flex;
@@ -169,39 +175,61 @@ input[type=submit] {
     color: #373867;
 }
 @media only screen and (min-width: 480px) {
-    .wh-is-trackgenix, .flex-container {
-        display: flex;
+    .homepg {
+        width: 100%;
+        padding-top: 35px;
+    }
+    .wh-is-trackgenix {
         flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
+        width: 100%;
     }
     .article-what-is {
-        margin: 0 8%;
+        width: 50%;
+    }
+    .wh-is-trackgenix img {
+        width: 50%;
+    }
+    .about-us {
+        border-bottom: solid 60px #49a37b;;
+    }
+    .flex-container {
+        display: flex;
     }
     .about-us-container-1, .about-us-container-2{
         flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
     }
-    .contact .flex-container {
-        border-bottom: solid 60px #49a37b;
+    .about-us div img{
+        width: 50%;
     }
-    .contact address {
-        border-bottom: 0;
-    }
-    .contact-footer{
+    .flex-container-2 {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .col-1, .col-2 {
+        width: 40%;
+        marg
         
     }
-    .contact-footer-item ol {
-        margin: 40% 4%;
+    .contact address, .contact {
+        border: none;
+    }
+    .contact-address-items {
+        margin: 6% 0% 6% 18%;
+    }
+    .contact-footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 80%;
+        padding-top: 4%;
+        margin-bottom: 2%;
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (min-width: 768px) {
     main {
-        margin-left: 252px;
+        margin-left: 260px;
     }
 }
