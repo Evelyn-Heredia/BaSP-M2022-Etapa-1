@@ -124,9 +124,17 @@ input[type=submit] {
     justify-content: center;
     align-items: center;
 }
+.col-1a, .col-2a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .contact form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
 }
 .contact form label {
     font-size: 14px;
@@ -137,6 +145,8 @@ input[type=submit] {
 .contact address {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-bottom: solid 60px #49a37b;
 }
 .contact-address-items {
@@ -151,7 +161,7 @@ input[type=submit] {
     text-align: left;
 }
 .contact-address-items p, .contact-address-items div {
-    width: 80%;
+    width: 90%;
 }
 .contact-footer {
     display: flex;
@@ -173,8 +183,6 @@ input[type=submit] {
 @media only screen and (min-width: 480px) {
     .homepg {
         width: 100%;
-        margin-top: -71px;
-        padding-top: 16px;
     }
     .wh-is-trackgenix {
         flex-direction: row;
@@ -205,7 +213,7 @@ input[type=submit] {
         padding-top: 98px;
         border: none;
     }
-    .col-1, .col-2 {
+    .col-1a, .col-2a {
         width: 40%;
     }
     .contact address {
@@ -229,11 +237,20 @@ input[type=submit] {
     main {
         margin-left: 260px;
     }
+    .homepg {
+        width: 100%;
+        margin-top: -71px;
+        padding-top: 41px;
+        }
+    }
     .article-what-is {
         align-self: flex-start;
         margin-top: 5%;
     }
     .wh-is-trackgenix img {
         max-width: 60%;
+    }
+    .about-us-container-1, .about-us-container-2 {
+        margin: 0% 15%;
     }
 }
