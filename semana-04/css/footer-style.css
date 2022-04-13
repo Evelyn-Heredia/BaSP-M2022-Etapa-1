@@ -1,4 +1,4 @@
-footer{
+footer {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -13,11 +13,11 @@ footer{
     color: #aace98;
     font-size: 16px;
 }
-footer ul{
+footer ul {
     display: flex;
     justify-content: space-around;
     width: auto;
 }
-footer ul li{
+footer ul li {
     margin: 0 3px;
 }

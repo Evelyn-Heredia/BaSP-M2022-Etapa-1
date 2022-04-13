@@ -1,22 +1,22 @@
-header{
+header {
     position: fixed;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    min-height: 72px;
+    padding: 0 5%;
     top: 0;
     right: 0;
     left: 0;
-    padding: 0 5%;
     background-color: #373867;
-    min-height: 72px;
 }
-.header-menu{
+.header-menu {
     width: 20px;
 }
-.header-logo{
+.header-logo {
     width: 60px;
 }
-.btn-sign-up{
+.btn-sign-up {
     width: 65px;
     height: 35px;
     background-color: #aace98;
@@ -24,7 +24,7 @@ header{
     border-radius: 5px;    
 }
 @media only screen and (min-width: 768px) {
-    .header-menu{
+    .header-menu {
         visibility: hidden;
     }
 }

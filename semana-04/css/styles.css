@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
@@ -9,7 +9,7 @@ body{
     text-transform: capitalize;
     text-decoration: none;
 }
-h1{
+h1 {
     margin: 10px 0;
     font-size: 40px;
     font-weight: 800;
