@@ -14,7 +14,7 @@ HTML document was created and edited in order to set the webpage structure.
 CSS document was created and edited in order to give style to the HTML document created on week 02.
 ## Week 04
 Responsive layout created and edited resorting to HTML and CSS files from previous weeks. Mobile First approach applied.
-GitHub Pages [link](https://evelyn-heredia.github.io/BaSP-M2022-Etapa-1/semana-04/index.html)
+GitHub Pages [link](https://evelyn-heredia.github.io/BaSP-M2022-Etapa-1/semana-04/index.html) for week 04.
 ## Week 05
 JavaScript sintax and tools. Exercises for practice on:
 1. Variables and operators.
@@ -23,6 +23,8 @@ JavaScript sintax and tools. Exercises for practice on:
 4. If / Else.
 5. For.
 6.  Functions.
+
+GitHub Pages [link](https://evelyn-heredia.github.io/BaSP-M2022-Etapa-1/semana-05/index.html) for week 05.
 ## Author
 Evelyn Heredia.
 ## Note
