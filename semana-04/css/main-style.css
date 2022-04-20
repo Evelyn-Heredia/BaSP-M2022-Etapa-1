@@ -201,7 +201,7 @@ input[type=submit] {
         border: none;
     }
     .col-1a, .col-2a {
-        width: 40%;
+        width: 49%;
     }
     .contact address {
         border: none;
@@ -211,9 +211,7 @@ input[type=submit] {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: nowrap;
-        width: 80%;
-        margin-bottom: 2%;
-        padding-top: 4%;
+        width: 90%;
         border-top: 1px solid rgba(0, 0, 0, 0.5);
     }
 }
