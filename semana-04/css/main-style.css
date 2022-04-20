@@ -160,7 +160,8 @@ input[type=submit] {
     text-align: justify;
 }
 .contact-footer-item {
-    margin-bottom: 30%;
+    margin-bottom: 10%;
+    margin-top: 8%;
 }
 .contact-footer-item ol {
     list-style: inside decimal;
@@ -192,9 +193,11 @@ input[type=submit] {
     }
     .about-us-container-1, .about-us-container-2 {
         flex-direction: row;
+        align-items: center;
+        width: 100%;
     }
     .about-us div img {
-        width: 50%;
+        width: 70%;
     }
     .contact {
         padding-top: 98px;
