@@ -9,7 +9,7 @@ main {
 input, select, textarea {
     width: 95%;
     height: 30px;
-    margin: 6px 0;
+    margin: 6px 0 25px;
     border: 1px solid rgb(55, 56, 103, 1);
     border-radius: 4px;
     color: rgb(55, 56, 103, 1);
@@ -47,6 +47,7 @@ input[type=submit] {
     justify-content: center;
     align-items: center;
     border-top: solid 60px #49a37b;
+    padding: 2%;
     text-align: center;
 }
 .home-pg-logo {
@@ -82,9 +83,7 @@ input[type=submit] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15% 5%;
     font-size: 18px;
-    font-weight: 21px;
     text-align: left;
 }
 .choose-me div img, .contact div img {
@@ -92,6 +91,7 @@ input[type=submit] {
     margin-right: 3%;
 }
 .choose-me-item-container div h3 {
+    margin: 15% 5%;
     font-size: 22px;
     font-weight: 26px;
 }
@@ -118,12 +118,6 @@ input[type=submit] {
     width: 85%;
     margin: 10% 0;
 }
-.contact .flex-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 .col-1a, .col-2a {
     display: flex;
     justify-content: center;
@@ -133,7 +127,7 @@ input[type=submit] {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     width: 90%;
 }
 .contact form label {
@@ -150,14 +144,9 @@ input[type=submit] {
     border-bottom: solid 60px #49a37b;
 }
 .contact-address-items {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: nowrap;
-    width: 70%;
+    width: 90%;
+    margin: 9% 5%;
     font-size: 14px;
-    font-weight: 400;
-    line-height: 22px;
     text-align: left;
 }
 .contact-address-items p, .contact-address-items div {
@@ -217,9 +206,6 @@ input[type=submit] {
     .contact address {
         border: none;
     }
-    .contact-address-items {
-        margin: 6% 0% 6% 18%;
-    }
     .contact-footer {
         display: flex;
         flex-direction: row;
@@ -237,7 +223,6 @@ input[type=submit] {
     }
     .homepg {
         width: 100%;
-        margin-top: -71px;
         padding-top: 41px;
         }
     .article-what-is {
