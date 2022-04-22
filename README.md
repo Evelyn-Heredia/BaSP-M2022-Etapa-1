@@ -13,7 +13,8 @@ HTML document was created and edited in order to set the webpage structure.
 ## Week 03
 CSS document was created and edited in order to give style to the HTML document created on week 02.
 ## Week 04
-Responsive layout created and edited resorting to HTML and CSS files from previous weeks. Mobile First approach applied.
+Responsive layout was created and edited resorting to HTML and CSS files from previous weeks. Mobile First approach was applied.
+
 GitHub Pages [link](https://evelyn-heredia.github.io/BaSP-M2022-Etapa-1/semana-04/index.html) for week 04.
 ## Week 05
 ### Part A
@@ -29,6 +30,10 @@ GitHub Pages [link](https://evelyn-heredia.github.io/BaSP-M2022-Etapa-1/semana-0
 
 ### Part B
 Taking into account tutor's corrections, ["semana-04/index.html"](https://evelyn-heredia.github.io/BaSP-M2022-Etapa-1/semana-04/index.html) file was revised and checked.
+## Week 06
+Reusing some of week 04 resources, "log in" and "sign up" pages were created. HTML was employed for describing the structure of Web pages, CSS for styles, and JavaScript for functionality.
+
+GitHub Pages [link](https://evelyn-heredia.github.io/BaSP-M2022-Etapa-1/semana-06/index.html) for week 06.
 ## Author
 Evelyn Heredia.
 ## Note
