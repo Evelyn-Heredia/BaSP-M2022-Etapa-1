@@ -33,7 +33,7 @@ Taking into account tutor's corrections, ["semana-04/index.html"](https://evelyn
 ## Week 06
 Reusing some of week 04 resources, "log in" and "sign up" pages were created. HTML was employed for describing the structure of Web pages, CSS for styles, and JavaScript for functionality.
 
-GitHub Pages [link](https://evelyn-heredia.github.io/BaSP-M2022-Etapa-1/semana-06/index.html) for week 06.
+GitHub Pages [link](https://evelyn-heredia.github.io/BaSP-M2022-Etapa-1/semana-06/views/index.html) for week 06.
 ## Author
 Evelyn Heredia.
 ## Note
