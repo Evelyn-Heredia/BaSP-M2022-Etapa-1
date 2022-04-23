@@ -1,0 +1,61 @@
+form, label, input, .main-container, .box, .form-container, .log-in-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+img {
+    justify-self: flex-start; 
+    width: 18%;
+    margin-bottom: 3%;    
+}
+form {
+    align-items: flex-start;
+    width: 90%;
+}
+input {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 5%;
+    border: 1px solid #373867;
+    border-radius: 4%;
+}
+p {
+    align-self: flex-start;
+}
+button {
+    height: 30px;
+    text-transform: capitalize;
+}
+.main-container {
+    width: 100%;
+    height: 90vh;
+    padding-top: 71px;
+}
+.form-container, .log-in-btns {
+    border-radius: 5%;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+}
+.form-container{
+    width: 90%;
+    padding: 5% 15%;
+    border: 1px solid #373867;
+}
+.log-in-btns{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    margin: 4% 0;
+    padding: 0 9%;
+}
+@media only screen and (min-width: 768px) {
+    main {
+        margin-left: 260px;
+    }
+}
