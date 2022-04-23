@@ -27,7 +27,13 @@ p {
     align-self: flex-start;
 }
 button {
-    height: 30px;
+    height: 35px;
+    border: 1px solid #373867;
+    border-radius: 8%;
+    color: #373867;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
     text-transform: capitalize;
 }
 .main-container {
@@ -53,6 +59,12 @@ button {
     height: 50px;
     margin: 4% 0;
     padding: 0 9%;
+}
+.btn-continue {
+    background-color: #aace98;
+}
+.btn-forgot-pass {
+    background-color: #ffffff;
 }
 @media only screen and (min-width: 768px) {
     main {
