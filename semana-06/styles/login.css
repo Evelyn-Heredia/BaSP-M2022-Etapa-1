@@ -1,45 +1,27 @@
-form, label, input, .main-container, .box, .form-container, .log-in-btns {
+.main-container,
+.box,
+.form-container,
+.form-container form,
+.form-container label,
+.form-conatiner input,
+.log-in-btns {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-transform: capitalize;
 }
-img {
-    justify-self: flex-start; 
-    width: 18%;
-    margin-bottom: 3%;    
-}
-form {
-    align-items: flex-start;
-    width: 90%;
-}
-input {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 35px;
-    margin-bottom: 5%;
-    border: 1px solid #373867;
-    border-radius: 4%;
-}
-p {
-    align-self: flex-start;
-}
-button {
-    height: 35px;
-    border: 1px solid #373867;
-    border-radius: 8%;
-    color: #373867;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: capitalize;
-}
 .main-container {
     width: 100%;
-    height: 90vh;
+    height: 95vh;
     padding-top: 71px;
+    background-color: rgba(55, 56, 103, 0.4);
+}
+.box {
+    padding: 5%;
+    margin: 2%;
+    border-radius: 5%;
+    background-color: #ffffff;
 }
 .form-container, .log-in-btns {
     border-radius: 5%;
@@ -59,6 +41,35 @@ button {
     height: 50px;
     margin: 4% 0;
     padding: 0 9%;
+}
+.form-logo {
+    justify-self: flex-start; 
+    width: 18%;
+    margin-bottom: 3%;    
+}
+.form-container form {
+    align-items: flex-start;
+    width: 90%;
+}
+.form-conatiner input {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 5%;
+    border: 1px solid #373867;
+    border-radius: 4%;
+}
+.form-container p {
+    align-self: flex-start;
+}
+.log-in-btns button {
+    height: 35px;
+    border: 1px solid #373867;
+    border-radius: 8%;
+    color: #373867;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
 }
 .btn-continue {
     background-color: #aace98;
