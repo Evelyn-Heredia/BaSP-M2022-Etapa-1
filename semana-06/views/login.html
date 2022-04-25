@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Trackgenix</title>
-            <!--style sheets-->
+        <!--style sheets-->
         <link rel="stylesheet" href="../styles/reset.css">
         <link rel="stylesheet" href="../styles/styles.css">
         <link rel="stylesheet" href="../styles/header-style.css">
@@ -13,14 +13,17 @@
         <link rel="stylesheet" href="../styles/sidebar-style.css">
         <link rel="stylesheet" href="../styles/landing.css">
         <link rel="stylesheet" href="../styles/login.css">
-            <!--end of style sheets-->
-            <!--favicon-->
+        <!--end of style sheets-->
+        <!--favicon-->
         <link rel="icon" href="../assets/favicon.ico">
-            <!--fonts-->
+        <!--fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-            <!--end of fonts-->
+        <!--end of fonts-->
+        <!--fontAwesome-->
+        <script src="https://kit.fontawesome.com/80318b8220.js" crossorigin="anonymous"></script>
+        <!--JavaScript-->
         <script src="../javascript/login.js"></script>
     </head>
     <body>
@@ -62,21 +65,49 @@
                     <div class="form-container">
                         <img class="form-logo" src="../assets/icons/logo.png" alt="Trackgenix Logo">
                         <h2>log in</h2>
-                        <form>
-                            <label for="eMail">E-mail:</label> 
-                            <input id="eMail" type="email" name="eMail" placeholder="E-mail" required>
-                            <label for="password">Password:</label>
-                            <input id="password" type="password" name="password" placeholder="Password" required>
-                            <div class="rememberMe">
-                                <input id="rememberMe"type="checkbox">
-                                <label id='remMe' for="rememberMe">Remember me</label>
+                        <form id="form" class="form">
+                            <!-- Email -->
+                            <div id="mail-div" class="form-group">
+                                <label for="email" class="form-label">E-mail:</label>
+                                <div class="form-div-input">
+                                    <input id="email" class="form-input" type="email" name="email" placeholder="E-mail" required>
+                                </div>
+                                <p class="form-input-error">
+                                    Enter a valid e-mail address (example, someone@example.com)
+                                </p>
+                            </div>
+                            <!-- Password -->
+                            <div id="password-div" class="form-group">
+                                <label class="form-label" for="password">Password:</label>
+                                <div class="form-div-input">
+                                    <input id="password" class="form-input" type="password" name="password" placeholder="Password" required>
+                                </div>
+                                <p class="form-input-error">
+                                    Password must contain letters and digits.
+                                </p>
+                            </div>
+                            <!-- Remember me -->
+                            <div id="remember-me-div" class="form-group">
+                                <input id="remember-me" class="form-checkbox" type="checkbox" name="remember-me">
+                                <label id="remember-text" class="form-input" for="remember-me" >Remember me</label>
+                            </div>
+                            <!-- Form message error -->
+                            <div id="form-message" class="form-message">
+                                <p>
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    Error: an entry is required or has an invalid value.
+                                    Please correct and try again.
+                                </p>
+                            </div>
+                            <!-- Form messages-->
+                            <div class="form-group form-div-log-in-btn">
+                                <button class="form-botton" type="submit">Log in</button>
+                                <p id="form-exit-message" class="form-exit-message">
+                                    alert with form information
+                                </p>
                             </div>
                         </form>
                     </div> 
-                    <div class="log-in-btns">
-                        <button class="btn-forgot-pass">forgot password</button>
-                        <button class="btn-continue">continue</button>
-                    </div>
                 </div>
             </div>
         </main>
