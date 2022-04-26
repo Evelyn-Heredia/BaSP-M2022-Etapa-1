@@ -5,35 +5,41 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Trackgenix</title>
-            <!--style sheets-->
+        <!--style sheets-->
         <link rel="stylesheet" href="../styles/reset.css">
         <link rel="stylesheet" href="../styles/styles.css">
         <link rel="stylesheet" href="../styles/header-style.css">
         <link rel="stylesheet" href="../styles/footer-style.css">
         <link rel="stylesheet" href="../styles/sidebar-style.css">
+        <link rel="stylesheet" href="../styles/landing.css">
         <link rel="stylesheet" href="../styles/employee-signup.css">
-            <!--end of style sheets-->
-            <!--favicon-->
+        <!--end of style sheets-->
+        <!--favicon-->
         <link rel="icon" href="../assets/favicon.ico">
-            <!--fonts-->
+        <!--fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-            <!--end of fonts-->
+        <!--end of fonts-->
+        <!--fontAwesome-->
+        <script src="https://kit.fontawesome.com/80318b8220.js" crossorigin="anonymous"></script>
+        <!--JavaScript-->
         <script src="../javascript/employee-signup.js"></script>
     </head>
     <body>
         <header>
             <img class="header-menu" src="../assets/icons/menu.png" alt="Menu">
             <img class="header-logo" src="../assets/icons/logo.png" alt="Logo">
-            <input class="btn-sign-up" type=button value="Sign up">
+            <a href="./employee-signup.html">
+                <input class="btn-sign-up" type=button value="Sign up">
+            </a>
         </header>
         <aside>         
             <nav>
                 <div class="shortcuts">shortcuts</div>
                 <ul>
                     <li>
-                        <a href=#homepage>homepage</a>
+                        <a href="index.html">homepage</a>
                     </li>
                     <li>
                         <a href=#what-track>what is trackgenix?</a>
@@ -48,48 +54,159 @@
                         <a href=#contact-track>get in touch</a>
                     </li>
                     <li>
-                        <a href="login.html">log in</a>
+                        <a href="./login.html">log in</a>
                     </li>
                 </ul>
             </nav>
         </aside>
         <main>
-            <div class="em-main-cont">
-                <div class="sign-up-container">
+            <div class="em-main-container">
+                <div class="em-box">
                     <div class="em-form-container">
-                        <img class="form-logo" src="../assets/icons/logo.png" alt="Trackgenix Logo">
+                        <img class="em-form-logo" src="../assets/icons/logo.png" alt="Trackgenix Logo">
                         <h2>sign up</h2>
-                        <form>
-                            <div class="col-1">
-                                <label for="name">name:</label>
-                                <input id="name" type="text" name="name" placeholder="Name" required>
-                                <label for="surname">surname:</label>
-                                <input id="surname" type="text" name="surname" placeholder="Surname" required>
-                                <label for="id">ID:</label>
-                                <input id="id" type="number" name="id" placeholder="ID" required>
-                                <label for="bday">birth date:</label>
-                                <input id="bday" type="date" name="bday" placeholder="Birth Date" required>
-                                <label for="phone">phone:</label>
-                                <input id="phone" type="tel" name="phone" placeholder="Phone" required>
+                        <form id="em-form" class="em-form">
+                            <div class="container">
+                                <div class="col-1">
+                                    <!-- User's name -->
+                                    <div id="em-name-div" class="em-form-group">
+                                        <label class="em-form-label" for="name">name:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="name" class="em-form-input" type="text" name="name" placeholder="Name">
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Name must contain only letters and must be at least three characters long (John)
+                                        </p>
+                                    </div>
+                                    <!-- Surname -->
+                                    <div id="em-surname-div" class="em-form-group">
+                                        <label class="em-form-label" for="surname">surname:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="surname" class="em-form-input" type="text" name="surname" placeholder="Surname" required>
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Surname must contain only letters and must be at least three characters long (example, John Doe)
+                                        </p>
+                                    </div>
+                                    <!-- ID -->
+                                    <div id="em-id-div" class="em-form-group">
+                                        <label class="em-form-label" for="id">ID:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="id" class="em-form-input" type="number" name="id" placeholder="33.333.222" required>
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            ID must contain only numbers and must be at least seven characters long (example, 11.222.333)
+                                        </p>
+                                    </div>
+                                    <!-- Birth date -->
+                                    <div id="em-birth-date-div" class="em-form-group">
+                                        <label class="em-form-label" for="birth-date">birth date:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="birth-date" class="em-form-input" type="number" name="birth-date" placeholder="birth date" required>
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Invalid format for birth date (expected dd/mm/yyyy)
+                                        </p>
+                                    </div>
+                                    <!-- Phone -->
+                                    <div id="em-phone-div" class="em-form-group">
+                                        <label class="em-form-label" for="phone">phone:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="phone" class="em-form-input" type="tel" name="phone" placeholder="phone" required>
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Phone number must contain only numbers and must be at least ten numbers long
+                                        </p>
+                                    </div>
+                                    <!-- Address -->
+                                    <div id="em-address-div" class="em-form-group">
+                                        <label class="em-form-label" for="address">address:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="address" class="em-form-input" type="text" name="address" placeholder="address" required>
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Address must contain numbers, letters and at least one gap.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <!-- City -->
+                                    <div id="em-city-div" class="em-form-group">
+                                        <label class="em-form-label" for="city">city:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="city" class="em-form-input" type="text" name="city" placeholder="city" required>
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            City must contain numbers, letters and at least one gap.
+                                        </p>
+                                    </div>
+                                    <!-- Postal code -->
+                                    <div id="em-postal-code-div" class="em-form-group">
+                                        <label class="em-form-label" for="postal-code">postal code:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="postal-code" class="em-form-input" type="text" name="postal-code" placeholder="postal code" required>
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Postal Code must only contain numbers.
+                                        </p>
+                                    </div>
+                                    <!-- Email -->
+                                    <div id="email-div" class="form-group">
+                                        <label class="form-label" for="email">E-mail:</label>
+                                        <div class="form-div-input">
+                                            <input id="email" class="form-input" type="email" name="email" placeholder="E-mail" required>
+                                        </div>
+                                        <p class="form-input-error">
+                                            Enter a valid e-mail address (example, someone@example.com)
+                                        </p>
+                                    </div>
+                                    <!-- Password -->
+                                    <div id="password-div" class="form-group">
+                                        <label class="form-label" for="password">Password:</label>
+                                        <div class="form-div-input">
+                                            <input id="password" class="form-input" type="password" name="password" placeholder="Password" required>
+                                        </div>
+                                        <p class="form-input-error">
+                                            Password must contain letters and digits.
+                                        </p>
+                                    </div>
+                                    <!-- Repeat Password -->
+                                    <div id="repeat-password-div" class="form-group">
+                                        <label class="form-label" for="repeat-password">Password:</label>
+                                        <div class="form-div-input">
+                                            <input id="repeat-password" class="form-input" type="password" name="repeat-password" placeholder="Repeat password" required>
+                                        </div>
+                                        <p class="form-input-error">
+                                            Both passwords must be the same.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-2">
-                                <label for="address">address:</label>
-                                <input id="pc" type="text" name="address" placeholder="Address" required>
-                                <label for="city">pity:</label>
-                                <input id="city" type="text" name="city" placeholder="City" required>    
-                                <label for="pc">postal Code:</label>
-                                <input id="pc" type="text" name="pc" placeholder="Postal Code" required>
-                                <label for="e-mail">E-mail:</label> 
-                                <input id="e-mail" type="email" name="e-mail" placeholder="E-mail" required>
-                                <label for="rpt-password">repeat password:</label>
-                                <input id="rpt-password" type="password" name="rpt-password" placeholder="Repeat Password" required>
+                            <!-- Remember me -->
+                            <div id="em-remember-me-div" class="em-form-group">
+                                <input id="em-remember-me" class="form-checkbox" type="checkbox" name="remember-me">
+                                <label id="em-remember-text" class="form-input" for="em-remember-me" >Remember me</label>
+                            </div>
+                            <!-- Form message error -->
+                            <div id="em-form-message" class="em-form-message">
+                                <p>
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    Error: an entry is required or has an invalid value.
+                                    Please correct and try again.
+                                </p>
+                            </div>
+                            <!-- Form messages-->
+                            <div class="em-form-group em-form-div-log-in-btn">
+                                <button class="em-form-botton" type="submit">Log in</button>
+                                <p id="em-form-exit-message" class="em-form-exit-message">
+                                    alert with form information
+                                </p>
                             </div>
                         </form>
-                        <p>remember me</p>
-                    </div> 
-                    <div class="log-in-btns">
-                        <button>forgot password</button>
-                        <button class="btn-continue">continue</button>
+                        <div class="log-in-btns">
+                            <button>forgot password</button>
+                            <button class="btn-continue">continue</button>
+                        </div>
                     </div>
                 </div>
             </div>
