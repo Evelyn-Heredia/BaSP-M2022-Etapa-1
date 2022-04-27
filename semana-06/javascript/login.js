@@ -7,13 +7,13 @@ var inputs = document.querySelectorAll('#form input');
 //Email field regex
 var regExMail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 //Exit massage for the whole form
-var exit = document.getElementById('exit-message');
+var boxGood = document.getElementById('exit-message');
 //Email input value
-var mailInput = document.getElementById('mail');
+var mailValue = document.getElementById('mail');
 //Password input value
-var passwordInput = document.getElementById('password');
+var passValue = document.getElementById('password');
 //Form error message
-var errorMessage = document.getElementById('form-message');
+var wrongValidation = document.getElementById('form-message');
 // Log in button
 var logInButton = document.getElementById('login-btn')
 ////////////////////////////////////////////////////////////////////////////////////
@@ -92,14 +92,13 @@ function passResetForm(e){
     document.querySelector('#password-div .form-input-error').classList.remove('form-input-error-active');
 }
 //Validation function for Log in button
-form.onsubmit = function(e) {
+form.onsubmit = function (e){
     e.preventDefault();
     if(mailValidation() == true && passwordValidation() == true){
-        exit.classList.remove('inactive');
-        exit.classList.add('exit-message');
-        exit.innerHTML = 'Email: ' + mailInput.value + '/ Password: ' + passwordInput.value;
+        boxGood.classList.remove('hide');
+        boxGood.innerHTML = 'mail: ' + mailValue.value + '/ password: ' + passValue.value;
     }else {
-        errorMessage.classList.remove('inactive');
+        wrongValidation.classList.remove('hide');
     }
 }
 ////////////////////////////////////////////////////////////////////////////////////

@@ -113,13 +113,13 @@
 .form-group-ok .form-input {
     border: 2px solid #006400;
 }
-.exit-message {
+.form-message {
     background-color: rgba(170, 206, 152, 0.6);
     display: block;
     align-self: center;
     margin: 5%; 
 }
-.inactive {
+.hide {
     visibility: hidden;
 }
 @media only screen and (min-width: 768px) {
