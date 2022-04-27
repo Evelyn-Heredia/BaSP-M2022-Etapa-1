@@ -98,14 +98,12 @@
     padding-left: 4%;
 }
 /* Validation styles */
-/*cruz*/
 .form-group-ok {
     color: #006400;
 }
 .form-group-wrong .form-label {
     color: #bb2929;
 }
-/*cruz*/
 .form-group-wrong {
     color: #bb2929;
 }
@@ -114,6 +112,15 @@
 }
 .form-group-ok .form-input {
     border: 2px solid #006400;
+}
+.exit-message {
+    background-color: rgba(170, 206, 152, 0.6);
+    display: block;
+    align-self: center;
+    margin: 5%; 
+}
+.inactive {
+    visibility: hidden;
 }
 @media only screen and (min-width: 768px) {
     main {

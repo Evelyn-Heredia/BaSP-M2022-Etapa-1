@@ -66,7 +66,6 @@
                         <img class="form-logo" src="../assets/icons/logo.png" alt="Trackgenix Logo">
                         <h2>log in</h2>
                         <form id="form" class="form">
-
                             <!-- Email -->
                             <div id="mail-div" class="form-group">
                                 <label class="form-label" for="mail">E-mail:</label>
@@ -77,7 +76,6 @@
                                     Enter a valid e-mail address (example, someone@example.com)
                                 </p>
                             </div>
-                            
                             <!-- Password -->
                             <div id="password-div" class="form-group">
                                 <label class="form-label" for="password">Password:</label>
@@ -94,16 +92,17 @@
                                 <label id="remember-text" class="form-input" for="remember-me" >Remember me</label>
                             </div>
                             <!-- Form message error -->
-                            <div id="form-message" class="form-message">
+                            <div id="form-message" class="form-message inactive">
                                 <p>
                                     <i class="fa-solid fa-circle-exclamation"></i>
                                     Error: an entry is required or has an invalid value.
                                     Please correct and try again.
                                 </p>
                             </div>
-                            <!-- Form messages-->
+                            <div id="exit-message" class="exit-message"></div>
+                            <!-- Log in-->
                             <div class="form-group form-div-log-in-btn">
-                                <button class="form-botton" type="submit">Log in</button>
+                                <button class="form-botton" id="login-btn" type="submit">Log in</button>
                                 <p id="form-exit-message" class="form-exit-message">
                                     alert with form information
                                 </p>
