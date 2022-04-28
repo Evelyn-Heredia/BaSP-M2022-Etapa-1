@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trackgenix</title>
+        <!--style sheets-->
+        <link rel="stylesheet" href="../styles/reset.css">
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/header-style.css">
+        <link rel="stylesheet" href="../styles/footer-style.css">
+        <link rel="stylesheet" href="../styles/sidebar-style.css">
+        <link rel="stylesheet" href="../styles/landing.css">
+        <link rel="stylesheet" href="../styles/employee-signup.css">
+        <!--end of style sheets-->
+        <!--favicon-->
+        <link rel="icon" href="../assets/favicon.ico">
+        <!--fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <!--end of fonts-->
+        <!--fontAwesome-->
+        <script src="https://kit.fontawesome.com/80318b8220.js" crossorigin="anonymous"></script>
+        <!--JavaScript-->
+        <script src="../javascript/employee-signup.js"></script>
+    </head>
+    <body>
+        <header>
+            <img class="header-menu" src="../assets/icons/menu.png" alt="Menu">
+            <img class="header-logo" src="../assets/icons/logo.png" alt="Logo">
+            <a href="./employee-signup.html">
+                <input class="btn-sign-up" type=button value="Sign up">
+            </a>
+        </header>
+        <aside>         
+            <nav>
+                <div class="shortcuts">shortcuts</div>
+                <ul>
+                    <li>
+                        <a href="index.html">homepage</a>
+                    </li>
+                    <li>
+                        <a href=#what-track>what is trackgenix?</a>
+                    </li>
+                    <li>
+                        <a href=#why-track>why choose trackgenix?</a>
+                    </li>
+                    <li>
+                        <a href=#about-track>about us</a>
+                    </li>
+                    <li>
+                        <a href=#contact-track>get in touch</a>
+                    </li>
+                    <li>
+                        <a href="./login.html">log in</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <div class="em-main-container">
+                <div class="em-box">
+                    <div class="em-form-container">
+                        <img id="em-form-logo" src="../assets/icons/logo.png" alt="Trackgenix Logo">
+                        <h1>sign up</h1>
+                        <form id="em-form" class="em-form">
+                            <div class="container">
+                                <div class="col-1">
+                                    <!-- User's name -->
+                                    <div id="em-name-div" class="em-form-group">
+                                        <label class="em-form-label" for="name">name:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="name" class="em-form-input" type="text" name="name" placeholder="name">
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Name must contain only letters and must be at least three characters long (John)
+                                        </p>
+                                    </div>
+                                    <!-- Surname -->
+                                    <div id="em-surname-div" class="em-form-group">
+                                        <label class="em-form-label" for="surname">surname:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="surname" class="em-form-input" type="text" name="surname" placeholder="surname">
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Surname must contain only letters and must be at least three characters long (example, John Doe)
+                                        </p>
+                                    </div>
+                                    <!-- ID -->
+                                    <div id="em-id-div" class="em-form-group">
+                                        <label class="em-form-label" for="id">ID:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="id" class="em-form-input" type="text" name="id" placeholder="33.333.222">
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            ID must contain only numbers and must be at least seven characters long (example, 11.222.333)
+                                        </p>
+                                    </div>
+                                    <!-- Birth date -->
+                                    <div id="em-birth-div" class="em-form-group">
+                                        <label class="em-form-label" for="birth">birth date:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="birth" class="em-form-input" type="date" name="birth" placeholder="birth date">
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Invalid format for birth date (expected dd/mm/yyyy)
+                                        </p>
+                                    </div>
+                                    <!-- Phone -->
+                                    <div id="em-phone-div" class="em-form-group">
+                                        <label class="em-form-label" for="phone">phone:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="phone" class="em-form-input" type="tel" name="phone" placeholder="phone">
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Phone number must contain only numbers and must be at least ten numbers long
+                                        </p>
+                                    </div>
+                                    <!-- Address -->
+                                    <div id="em-address-div" class="em-form-group">
+                                        <label class="em-form-label" for="address">address:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="address" class="em-form-input" type="text" name="address" placeholder="address">
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Address must contain numbers, letters and at least one gap.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <!-- City -->
+                                    <div id="em-city-div" class="em-form-group">
+                                        <label class="em-form-label" for="city">city:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="city" class="em-form-input" type="text" name="city" placeholder="city">
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            City must contain numbers, letters and at least one gap.
+                                        </p>
+                                    </div>
+                                    <!-- Postal code -->
+                                    <div id="em-pc-div" class="em-form-group">
+                                        <label class="em-form-label" for="pc">postal code:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="pc" class="em-form-input" type="text" name="pc" placeholder="postal code">
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Postal Code must only contain numbers.
+                                        </p>
+                                    </div>
+                                    <!-- Email -->
+                                    <div id="em-email-div" class="em-form-group">
+                                        <label class="em-form-label" for="email">E-mail:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="email" class="em-form-input" type="email" name="email" placeholder="E-mail">
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Enter a valid e-mail address (example, someone@example.com)
+                                        </p>
+                                    </div>
+                                    <!-- Password -->
+                                    <div id="em-password-div" class="em-form-group">
+                                        <label class="em-form-label" for="password">Password:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="password" class="em-form-input" type="password" name="password" placeholder="password">
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Password must contain letters and digits.
+                                        </p>
+                                    </div>
+                                    <!-- Repeat Password -->
+                                    <div id="em-repeat-password-div" class="em-form-group">
+                                        <label class="em-form-label" for="repeat-password">Repeat password:</label>
+                                        <div class="em-form-div-input">
+                                            <input id="repeat-password" class="em-form-input" type="password" name="repeat-password" placeholder="repeat password">
+                                        </div>
+                                        <p class="em-form-input-error">
+                                            Both passwords must be the same.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Remember me -->
+                            <div id="em-remember-me-div" class="em-form-group">
+                                <input id="em-remember-me" class="em-form-checkbox" type="checkbox" name="em-remember-me">
+                                <label id="em-remember-text" class="form-input" for="em-remember-me" >Remember me</label>
+                            </div>
+                            <!-- Form message error for invalid input -->
+                            <div id="em-form-message" class="em-form-message">
+                                <p>
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    Error: an entry is required or has an invalid value.
+                                    Please correct and try again.
+                                </p>
+                            </div>
+                            <!-- Exit form message is everything is ok -->
+                            <div id="em-form-exit-message" class="em-form-exit-message">
+                                <p></p>
+                            </div>
+                            <div class="log-in-btns">
+                                <button id="forgot-btn" class="em-form-btns">forgot password</button>
+                                <button id="continue-btn" class="em-form-btns">continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <li>
+                    <a href="https://ar.linkedin.com/" target="_blank"><img src="../assets/icons/linkedin.svg" alt="Linkedin"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/" target="_blank"><img src="../assets/icons/twitter.svg" alt="Twitter"></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../assets/icons/facebook.svg" alt="Facebook"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../assets/icons/instagram.svg" alt="Instagram"></a>
+                </li>
+                <li>
+                    <a href="https://github.com/" target="_blank"><img src="../assets/icons/githab.svg" alt="Github"></a>
+                </li>
+            </ul>
+            <address>Rosario, Argentina</address>
+            <p>Copyright &copy; 2022 Trackgenix S.A. All rights reserved</p>
+        </footer>  
+    </body>
+</html>
