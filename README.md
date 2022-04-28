@@ -34,6 +34,10 @@ Taking into account tutor's corrections, ["semana-04/index.html"](https://evelyn
 Reusing some of week 04 resources, "log in" and "sign up" pages were created. HTML was employed for describing the structure of Web pages, CSS for styles, and JavaScript for functionality.
 
 GitHub Pages [link](https://evelyn-heredia.github.io/BaSP-M2022-Etapa-1/semana-06/views/index.html) for week 06.
+## Week 07
+Reworking the project from week 06, JavaScript was used to extend form validation from "log in" and "employee sign up" pages.
+
+GitHub repository [link](https://github.com/Evelyn-Heredia/BaSP-M2022-Etapa-1/tree/master/semana-07) for week 07.
 ## Author
 Evelyn Heredia.
 ## Note
