@@ -92,18 +92,20 @@
                                 <label id="remember-text" class="form-input" for="remember-me" >Remember me</label>
                             </div>
                             <!-- Form message error for invalid input -->
-                            <div id="form-message" class="form-message">
-                                <p>
+                            <div id="message-div" class="form-group">
+                                <p class="form-input-error">
                                     <i class="fa-solid fa-circle-exclamation"></i>
-                                    Error: an entry is required or has an invalid value.
+                                    Error: an entry is required or it has an invalid value.
                                     Please correct it and try again.
                                 </p>
                             </div>
-                            <!-- Exit form message is everything is ok -->
-                            <div id="form-exit-message" class="form-exit-message">
-                                <p></p>
+                            <!-- Exit form message for valid input -->
+                            <div id="exit-div" class="form-group">
+                                <p class="form-input-error-exit">
+                                Please correct it and try again.
+                                </p>
                             </div>
-                            <!-- Log in-->
+                            <!-- Log in button-->
                             <div class="form-group form-div-log-in-btn">
                                 <button class="form-botton" id="login-btn" type="submit">Log in</button>
                             </div>

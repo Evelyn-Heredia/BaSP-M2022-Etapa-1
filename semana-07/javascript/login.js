@@ -6,11 +6,14 @@ var form = document.getElementById('form');
 var inputs = document.querySelectorAll('#form input');
 //Email field regex
 var regExMail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+// Form exit message
+var exitMessage = document.getElementById('exit-div');
 // Log in button
 var loginbtn = document.getElementById('login-btn');
 ////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
 //////////// Functions ////////////
-//Validation function for Email
+//Characters validation function for Email
 var mailValidation = function(e){
     if(regExMail.test(inputs[0].value)){
         document.getElementById('mail-div').classList.remove('form-group-wrong');
@@ -82,13 +85,26 @@ function formValidation(e){
     var validEmail = mailValidation();
     var validPasword = passwordValidation();
     if (validEmail === false && validPasword === false){
-        console.log('form is wrong');
+        document.getElementById('message-div').classList.add('form-group-wrong');
+        document.getElementById('message-div').classList.remove('form-group-ok');
+        document.querySelector('#message-div .form-input-error').classList.add('form-input-error-active');
     } else if (validEmail === false || validPasword === false){
-        console.log('form is wrong');
+        document.getElementById('message-div').classList.add('form-group-wrong');
+        document.getElementById('message-div').classList.remove('form-group-ok');
+        document.querySelector('#message-div .form-input-error').classList.add('form-input-error-active');
     } else {
-        console.log('form is ok');
+        document.getElementById('exit-div').classList.remove('form-group-wrong');
+        document.getElementById('exit-div').classList.add('form-group-ok');
+        document.querySelector('#exit-div .form-input-error-exit').classList.add('form-input-error-exit-active');
+        exitMessage.innerHTML = 'Email: ' + inputs[0].value + ' Password: ' + inputs[1].value;
     }
 }
+// Whole form reset function
+function resetFormValidation(e){
+    document.getElementById('message-div').classList.remove('form-group-wrong');
+    document.getElementById('message-div').classList.remove('form-group-ok');
+    document.querySelector('#message-div .form-input-error').classList.remove('form-input-error-active');
+} 
 ////////////////////////////////////////////////////////////////////////////////////
 //////////// Validations ////////////
 //Email field validation
@@ -99,6 +115,7 @@ inputs[1].addEventListener('blur', passwordValidation);
 inputs[1].addEventListener('focus', passResetForm);
 // Form validation
 loginbtn.addEventListener('click', formValidation);
+loginbtn.addEventListener('blur', resetFormValidation);
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 }

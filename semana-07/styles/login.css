@@ -1,19 +1,21 @@
+main {
+    margin-top: 71px;
+}
 .main-container, .box, .form-container, .form, .form-group, .form-message {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     text-transform: capitalize;
 }
 .main-container {
     width: 100%;
-    min-height: 85vh;
-    margin-top: 71px;
+    height: 89vh;
     background-color: rgba(55, 56, 103, 0.4);
 }
 .box {
     width: 75%;
-    min-height: 30%;
     padding: 4%;
     margin: 2%;
     border-radius: 4%;
@@ -44,21 +46,16 @@
     color: #bb2929;
     font-size: 12px;
 }
-.form-message {
+.form-input-error-exit {
     display: none;
 }
-.form-message-active {
+.form-input-error-exit-active {
     display: flex;
-    color: #bb2929;
-    font-size: 12px;
-}
-.form-exit-message {
-    display: none;
-}
-.form-exit-message-active {
-    background-color: rgba(170, 206, 152, 0.6);
-    display: block;
     align-self: center;
+    align-items: center;
+    flex-direction: column;
+    color: #006400;
+    border: 2px solid #006400;
 }
 .form-botton {
     display: flex;
