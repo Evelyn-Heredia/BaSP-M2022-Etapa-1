@@ -1,3 +1,6 @@
+main {
+    margin-top: 71px;
+}
 .em-main-container, .em-box, .em-form-container, .em-form, .em-form-group, .em-form-message, .container, .col-1, .col-2 {
     display: flex;
     flex-direction: column;
@@ -7,13 +10,12 @@
     text-transform: capitalize;
 }
 .em-main-container {
-    min-height: 85vh;
-    margin-top: 71px;
+    width: 100%;
     background-color: rgba(55, 56, 103, 0.4);
+    padding-bottom: 90px;
 }
 .em-box {
     width: 75%;
-    min-height: 30%;
     padding: 4%;
     margin: 2%;
     border-radius: 4%;
@@ -44,25 +46,16 @@
     color: #bb2929;
     font-size: 12px;
 }
-.em-form-message {
+.em-form-input-error-exit {
     display: none;
 }
-.em-form-message-active {
+.em-form-input-error-exit-active {
     display: flex;
-    color: #bb2929;
-    font-size: 12px;
-}
-.em-form-exit-message {
-    display: none;
-}
-.em-form-exit-message-active {
-    background-color: rgba(170, 206, 152, 0.6);
-    display: block;
     align-self: center;
-}
-.log-in-btns {
-    display: flex;
-    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: #006400;
+    border: 2px solid #006400;
 }
 .em-form-btns {
     display: flex;
@@ -102,6 +95,10 @@
 }
 #continue-btn {
     margin-left: 5%;
+}
+#final-btns{
+    flex-direction: row;
+    justify-content: space-around;
 }
 /* Validation styles */
 .em-form-group-ok {

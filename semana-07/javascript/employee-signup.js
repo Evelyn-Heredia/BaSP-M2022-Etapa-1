@@ -451,12 +451,32 @@ function formValidation(e){
     var validPasword = passwordValidation();
     var validPasword2 = passwordValidation2();
     if (validEmail === false  && validSurname === false && validId === false && validBirth === false && validPhone === false && validAddress === false && validCity === false && validPc === false && emailValidation === false && validPasword === false && validPasword2 === false){
-        console.log('form is wrong');
+        document.getElementById('em-message-div').classList.add('em-form-group-wrong');
+        document.getElementById('em-message-div').classList.remove('em-form-group-ok');
+        document.querySelector('#em-message-div .em-form-input-error').classList.add('em-form-input-error-active');
     } else if (validEmail === false || validSurname === false || validId === false || validBirth === false || validPhone === false || validAddress === false || validCity === false || validPc === false || emailValidation === false || validPasword === false || validPasword2 === false){
-        console.log('form is wrong');
+        document.getElementById('em-message-div').classList.add('em-form-group-wrong');
+        document.getElementById('em-message-div').classList.remove('em-form-group-ok');
+        document.querySelector('#em-message-div .em-form-input-error').classList.add('em-form-input-error-active');
     } else {
-        console.log('form is ok');
-    }
+        document.getElementById('exit-div').classList.remove('form-group-wrong');
+        document.getElementById('exit-div').classList.add('form-group-ok');
+        exitMessage.innerHTML = 'Email: ' + inputs[0].value + ' Password: ' + inputs[1].value;
+    }/*
+    if (inputs[0].value === "rose@radiumrocket.com" && inputs[1].value === "BaSP2022"){ //para el caso del sign up hay que agregar todos los demás campos com direc, tel, etc
+        fetch ("https://basp-m2022-api-rest-server.herokuapp.com/login?email=rose@radiumrocket.com&password=BaSP2022")
+            .then(function(data){
+                console.log(data);
+                return data.json(); //aca va lo que hay que hacer si esta todo bien y además agregar los dos puntos que se piden para el sign up (local storage)
+            })
+            .then(function(answer){
+                console.log(answer)
+                alert('The form was successfully sent: ' + JSON.stringify(answer));
+            })
+            .catch(function(error){
+                alert('The form was not sent' + error ); //aca va lo que hay que hacer si hay error en la request
+            })
+    }*/
 }
 ////////////////////////////////////////////////////////////////////////////////////
 //////////// Validations ////////////

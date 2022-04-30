@@ -10,8 +10,6 @@ var regExMail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 var exitMessage = document.getElementById('exit-div');
 // Log in button
 var loginbtn = document.getElementById('login-btn');
-////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
 //////////// Functions ////////////
 //Characters validation function for Email
 var mailValidation = function(e){
@@ -95,8 +93,21 @@ function formValidation(e){
     } else {
         document.getElementById('exit-div').classList.remove('form-group-wrong');
         document.getElementById('exit-div').classList.add('form-group-ok');
-        document.querySelector('#exit-div .form-input-error-exit').classList.add('form-input-error-exit-active');
         exitMessage.innerHTML = 'Email: ' + inputs[0].value + ' Password: ' + inputs[1].value;
+    }
+    if (inputs[0].value === "rose@radiumrocket.com" && inputs[1].value === "BaSP2022"){ //para el caso del sign up hay que agregar todos los demás campos com direc, tel, etc
+        fetch ("https://basp-m2022-api-rest-server.herokuapp.com/login?email=rose@radiumrocket.com&password=BaSP2022")
+            .then(function(data){
+                console.log(data);
+                return data.json(); //aca va lo que hay que hacer si esta todo bien y además agregar los dos puntos que se piden para el sign up (local storage)
+            })
+            .then(function(answer){
+                console.log(answer)
+                alert('The form was successfully sent: ' + JSON.stringify(answer));
+            })
+            .catch(function(error){
+                alert('The form was not sent' + JSON.stringify(error)); //aca va lo que hay que hacer si hay error en la request
+            })
     }
 }
 // Whole form reset function
@@ -105,7 +116,6 @@ function resetFormValidation(e){
     document.getElementById('message-div').classList.remove('form-group-ok');
     document.querySelector('#message-div .form-input-error').classList.remove('form-input-error-active');
 } 
-////////////////////////////////////////////////////////////////////////////////////
 //////////// Validations ////////////
 //Email field validation
 inputs[0].addEventListener('blur', mailValidation);
@@ -116,6 +126,4 @@ inputs[1].addEventListener('focus', passResetForm);
 // Form validation
 loginbtn.addEventListener('click', formValidation);
 loginbtn.addEventListener('blur', resetFormValidation);
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
 }
