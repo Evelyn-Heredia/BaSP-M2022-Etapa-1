@@ -91,19 +91,20 @@ window.onload = function(){
             document.getElementById('message-div').classList.remove('form-group-ok');
             document.querySelector('#message-div .form-input-error').classList.add('form-input-error-active');
         } 
-        if (inputs[0].value === "rose@radiumrocket.com" && inputs[1].value === "BaSP2022"){ //para el caso del sign up hay que agregar todos los demás campos com direc, tel, etc
-            fetch ("https://basp-m2022-api-rest-server.herokuapp.com/login?email=" + inputs[0].value + "&password=" + inputs[1].value)
+        if (inputs[0].value === "rose@radiumrocket.com" && inputs[1].value === "BaSP2022"){ 
+            fetch ("https://basp-m2022-api-rest-server.herokuapp.com/login?email=" + inputs[0].value +
+            "&password=" + inputs[1].value)
                 .then(function(data){
                     console.log(data);
-                    return data.json(); //aca va lo que hay que hacer si esta todo bien y además agregar los dos puntos que se piden para el sign up (local storage)
+                    return data.json(); 
                 })
-                .then(function(answer){
-                    console.log(answer)
-                    alert('The form was successfully sent: ' + JSON.stringify(answer));
+                .then(function(data){
+                    console.log(data)
+                    alert('The form was successfully sent: ' + data.msg);
                 })
                 .catch(function(error){
                     console.log(error);
-                    alert('The form was not sent' + JSON.stringify(error)); //aca va lo que hay que hacer si hay error en la request
+                    alert('The form was not sent' + JSON.stringify(error)); 
                 })
         }
     }
@@ -113,7 +114,7 @@ window.onload = function(){
         document.getElementById('message-div').classList.remove('form-group-ok');
         document.querySelector('#message-div .form-input-error').classList.remove('form-input-error-active');
     } 
-    //////////// Validations ////////////
+    //////////// Event Listeners ////////////
     //Email field validation
     inputs[0].addEventListener('blur', mailValidation);
     inputs[0].addEventListener('focus', resetForm);

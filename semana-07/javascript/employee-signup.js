@@ -93,9 +93,11 @@ window.onload = function(){
                 other++
             }
         }
-        if (inputs[index].value.length >= 7 && num >= 1 && other == 0){
+        if (inputs[index].value.length <=8 && num >= 7 && other == 0){
             return true;
-        }else {
+        }else if (isNaN(index)) {
+            return false;
+        } else {
             return false;
         }
     }
@@ -120,51 +122,47 @@ window.onload = function(){
         document.getElementById('em-id-div').classList.remove('em-form-group-ok');
         document.querySelector('#em-id-div .em-form-input-error').classList.remove('em-form-input-error-active');
     }
-    //Validation function for Birth Date characters
-
-
-    //corregir la funcion de fecha
-    function birthDValidCharacters(index){
+    //Validation function for Date of Birth
+    function birthValidCharacters(){
         var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-        var date = [2022];
-        var symbols = ['/', '-'];
         var num = 0;
-        var actualDate = 0;
-        var sym = 0;
         var other = 0;
-        for(var i = 0; i < inputs[index].value.length; i ++){
-            if(numbers.includes(inputs[index].value[i])){
+        for(var i = 0; i < inputs[3].value.length; i ++){
+            if(numbers.includes(inputs[3].value[i])){
                 num++;   
-            } else if (date.includes(inputs[index].value[i])){
-                actualDate++;
-            } else if (symbols.includes(inputs[index].value[i])){
-                sym++;
             } else {
                 other++
             }
         }
-        if (inputs[index].value.length >= 8 && num >= 1 && actualDate === 0 && sym >= 2 && other == 0){
+        if (inputs[3].value.length <=8 && num <= 6  && other == 0){
             return true;
-        }else {
+        }else if (isNaN(inputs[3].value)) {
+            return false;
+        } else {
             return false;
         }
     }
-    //Validation function for Birth Date
-    function birthValidation() {
-        var validationOk = birthDValidCharacters(3);
-        if(validationOk === true){
+    // Validation function for Date of Birth
+    function birthValidation (){
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+        today = yyyy  + '-' + mm + '-' + dd ;
+        var dateValue = inputs[3].value;
+        if(birthValidCharacters() !== 0 && dateValue < today){
             document.getElementById('em-birth-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-birth-div').classList.add('em-form-group-ok');
             document.querySelector('#em-birth-div .em-form-input-error').classList.remove('em-form-input-error-active');
-            return true;
-        } else{
+            return true
+        } else {
             document.getElementById('em-birth-div').classList.add('em-form-group-wrong');
             document.getElementById('em-birth-div').classList.remove('em-form-group-ok');
             document.querySelector('#em-birth-div .em-form-input-error').classList.add('em-form-input-error-active');
-            return false;
+            return false
         }
     }
-    // Reset input field function for Birth Date
+    // Reset input field function for Birth of Date
     function bDateResetForm(e){
         document.getElementById('em-birth-div').classList.remove('em-form-group-wrong');
         document.getElementById('em-birth-div').classList.remove('em-form-group-ok');
@@ -234,7 +232,7 @@ window.onload = function(){
                 symbols++
             }
         }
-        if (inputs[index].value.length >= 5 && num >= 1 && lett >= 1 && spa == 1 && symbols == 0){
+        if (inputs[index].value.length >= 5 && num >= 1 && lett >= 3 && spa == 1 && symbols == 0){
             return true;
         }else {
             return false;
@@ -284,7 +282,7 @@ window.onload = function(){
                 symbols++
             }
         }
-        if (inputs[index].value.length >= 3 && num >= 1 && lett >= 1 && spa == 0 && symbols == 0){
+        if (inputs[index].value.length >= 3 && num == 0 && lett >= 1 && spa == 0 && symbols == 0){
             return true;
         }else {
             return false;
@@ -391,7 +389,7 @@ window.onload = function(){
                 symbols++
             }
         }
-        if (inputs[index].value.length >= 8 && num >= 1 && lett >= 1 && symbols == 0){
+        if (inputs[index].value.length >= 7 && num >= 1 && lett >= 1 && symbols == 0){
             return true;
         }else {
             return false;
@@ -404,10 +402,12 @@ window.onload = function(){
             document.getElementById('em-password-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-password-div').classList.add('em-form-group-ok');
             document.querySelector('#em-password-div .em-form-input-error').classList.remove('em-form-input-error-active');
+            return true
         } else{
             document.getElementById('em-password-div').classList.add('em-form-group-wrong');
             document.getElementById('em-password-div').classList.remove('em-form-group-ok');
             document.querySelector('#em-password-div .em-form-input-error').classList.add('em-form-input-error-active');
+            return false
         }
     }
     // Reset input field function for Password
@@ -418,9 +418,9 @@ window.onload = function(){
     }
     //Validation function for Repeat password
     function passwordValidation2() {
-        var passValidation = passwordCharacValidation(9) === true;
-        var passValidation2 = passwordCharacValidation(10) === true;
-        if(passValidation === passValidation2 && inputs[9].value === inputs[10].value ){
+        var passValidation = passwordCharacValidation(9);
+        var passValidation2 = passwordCharacValidation(10);
+        if(passValidation === true && passValidation2 === true && inputs[9].value === inputs[10].value && passValidation2 !== null){
             document.getElementById('em-repeat-password-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-repeat-password-div').classList.add('em-form-group-ok');
             document.querySelector('#em-repeat-password-div .em-form-input-error').classList.remove('em-form-input-error-active');
@@ -473,28 +473,29 @@ window.onload = function(){
         }
         if (validName === true  && validSurname === true && validId === true && validBirth === true &&
             validPhone === true && validAddress === true && validCity === true && validPc === true &&
-            validEmail === true && validPasword === true ){ 
-            fetch ("https://basp-m2022-api-rest-server.herokuapp.com/signup?name=" + inputs[0].value + "&lastName=" + inputs[1].value + "&dni=" + inputs[2] +
-            "&dob=" + inputs[3].value + "&phone=" + inputs[4].value + "&address=" + inputs[5].value + "&city=" + inputs[6].value +
-            "&zip=" + inputs[7].value + "&email=" + inputs[8].value + "&password=" + inputs[9].value)
+            validEmail === true && validPasword === true){ 
+            fetch ("https://basp-m2022-api-rest-server.herokuapp.com/signup?name=" + inputs[0].value + "&lastName=" +
+            inputs[1].value + "&dni=" + inputs[2].value +"&dob=" + inputs[3].value + "&phone=" + inputs[4].value +
+            "&address=" + inputs[5].value + "&city=" + inputs[6].value + "&zip=" + inputs[7].value + "&email=" + inputs[8].value + "&password=" + inputs[9].value)
                 .then(function(data){
                     console.log(data);
-                    return data.json(); //aca va lo que hay que hacer si esta todo bien y además agregar los dos puntos que se piden para el sign up (local storage)
+                    return data.json();
                 })
-                .then(function(answer){
-                    console.log(answer)
-                    alert('The form was successfully sent: ' + JSON.stringify(answer));
+                .then(function(data){
+                    console.log(data)
+                    alert('The form was successfully sent: ' + data.msg);
                 })
                 .catch(function(error){
-                    alert('The form was not sent' + error ); //aca va lo que hay que hacer si hay error en la request
+                    alert('The form was not sent' + error );
                 })
-        }
+        } 
     }
     // Whole form reset function
     function formReset(){
         document.getElementById('em-message-div').classList.remove('em-form-group-wrong');
         document.getElementById('em-message-div').classList.remove('em-form-group-ok');
         document.querySelector('#em-message-div .em-form-input-error').classList.remove('em-form-input-error-active');
+        exitMessage.innerHTML = ' ';
     }
     ////////////////////////////////////////////////////////////////////////////////////
     //////////// Validations ////////////
