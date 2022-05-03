@@ -1,6 +1,5 @@
 window.onload = function(){
-    //////////// Variables ////////////
-    //Form label
+    //Form label variable
     var form = document.getElementById('em-form');
     //Input fields - array-
     var inputs = document.querySelectorAll('#em-form input');
@@ -10,7 +9,6 @@ window.onload = function(){
     var exitMessage = document.getElementById('em-exit-div');
     // Create button
     var createBtn = document.getElementById('create-btn');
-    ////////////////////////////////////////////////////////////////////////////////////
     //////////// Functions ////////////
     //Validation function for NAME characters
     function validCharacters(index){
@@ -40,7 +38,7 @@ window.onload = function(){
     //Validation function for Name
     function nameValidation() {
         var validationOk = validCharacters(0);
-        if(validationOk === true){
+        if(validationOk){
             document.getElementById('em-name-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-name-div').classList.add('em-form-group-ok');
             document.querySelector('#em-name-div .em-form-input-error').classList.remove('em-form-input-error-active');
@@ -61,7 +59,7 @@ window.onload = function(){
     //Validation function for Surname
     function surnameValidation() {
         var validationOk = validCharacters(1);
-        if(validationOk === true){
+        if(validationOk){
             document.getElementById('em-surname-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-surname-div').classList.add('em-form-group-ok');
             document.querySelector('#em-surname-div .em-form-input-error').classList.remove('em-form-input-error-active');
@@ -104,7 +102,7 @@ window.onload = function(){
     //Validation function for ID
     function idValidation() {
         var validationOk = idValidCharacters(2);
-        if(validationOk === true){
+        if(validationOk){
             document.getElementById('em-id-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-id-div').classList.add('em-form-group-ok');
             document.querySelector('#em-id-div .em-form-input-error').classList.remove('em-form-input-error-active');
@@ -188,7 +186,7 @@ window.onload = function(){
     //Validation function for Phone
     function phoneValidation() {
         var validationOk = phoneValidCharacters(4);
-        if(validationOk === true){
+        if(validationOk){
             document.getElementById('em-phone-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-phone-div').classList.add('em-form-group-ok');
             document.querySelector('#em-phone-div .em-form-input-error').classList.remove('em-form-input-error-active');
@@ -238,7 +236,7 @@ window.onload = function(){
     //Validation function for address
     function addressValidation() {
         var validationOk = addressCharacters(5);
-        if(validationOk === true){
+        if(validationOk){
             document.getElementById('em-address-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-address-div').classList.add('em-form-group-ok');
             document.querySelector('#em-address-div .em-form-input-error').classList.remove('em-form-input-error-active');
@@ -288,7 +286,7 @@ window.onload = function(){
     //Validation function for city
     function cityValidation() {
         var validationOk = cityCharacters(6);
-        if(validationOk === true){
+        if(validationOk){
             document.getElementById('em-city-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-city-div').classList.add('em-form-group-ok');
             document.querySelector('#em-city-div .em-form-input-error').classList.remove('em-form-input-error-active');
@@ -329,7 +327,7 @@ window.onload = function(){
     //Validation function for POSTAL CODE
     function pcValidation() {
         var validationOk = pcValidCharacters(7);
-        if(validationOk === true){
+        if(validationOk){
             document.getElementById('em-pc-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-pc-div').classList.add('em-form-group-ok');
             document.querySelector('#em-pc-div .em-form-input-error').classList.remove('em-form-input-error-active');
@@ -395,7 +393,7 @@ window.onload = function(){
     //Validation function for Password
     function passwordValidation() {
         var passValidation = passwordCharacValidation(9);
-        if(passValidation === true){
+        if(passValidation){
             document.getElementById('em-password-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-password-div').classList.add('em-form-group-ok');
             document.querySelector('#em-password-div .em-form-input-error').classList.remove('em-form-input-error-active');
@@ -417,7 +415,7 @@ window.onload = function(){
     function passwordValidation2() {
         var passValidation = passwordCharacValidation(9);
         var passValidation2 = passwordCharacValidation(10);
-        if(passValidation === true && passValidation2 === true && inputs[9].value === inputs[10].value && passValidation2 !== null){
+        if(passValidation && passValidation2 && inputs[9].value === inputs[10].value && passValidation2 !== null){
             document.getElementById('em-repeat-password-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-repeat-password-div').classList.add('em-form-group-ok');
             document.querySelector('#em-repeat-password-div .em-form-input-error').classList.remove('em-form-input-error-active');
@@ -438,16 +436,15 @@ window.onload = function(){
     // Whole form validation
     function formValidation(e){
         e.preventDefault();
-        var validations = nameValidation() + surnameValidation() +
-        idValidation() + birthValidation() + phoneValidation() +
-        addressValidation() + cityValidation() + pcValidation() +
-        emailValidation() + passwordValidation() + passwordValidation2();
         var date = inputs[3].value
         var year = date.substring(0, 4);
-        var months = date.substring(5, 7);
+        var month = date.substring(5, 7);
         var day = date.substring(8, 10);
-        var validDobFormat = months + '/' + day + '/' + year;
-        if (validations){
+        var validDobFormat = month + '/' + day + '/' + year;
+        if (nameValidation() && surnameValidation() &&
+        idValidation() && birthValidation() && phoneValidation() &&
+        addressValidation() && cityValidation() && pcValidation() &&
+        emailValidation() && passwordValidation() && passwordValidation2()){
             document.getElementById('em-exit-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-exit-div').classList.add('em-form-group-ok');
             exitMessage.innerHTML = 'Name: ' + inputs[0].value + ' Surname: ' + inputs[1].value + ' ID: ' + inputs[2].value + ' Birth Date: ' + validDobFormat +
@@ -458,15 +455,24 @@ window.onload = function(){
             "&address=" + inputs[5].value + "&city=" + inputs[6].value + "&zip=" + inputs[7].value + "&email=" +
             inputs[8].value + "&password=" + inputs[9].value)
                 .then(function(response){
-                    console.log(response);
                     return response.json();
                 })
                 .then(function(response){
-                    alert(response.msg); 
-                    var jsondata = response; 
+                    alert(response.msg + ' ' + JSON.stringify(response)); 
+                    response.data.dob =  year + "-" + month  + "-" + day ;
+                    localStorage.setItem('Name',response.data.name);
+                    localStorage.setItem('Surname',response.data.lastName);
+                    localStorage.setItem('Id',response.data.dni);
+                    localStorage.setItem('Date of birth',response.data.dob);
+                    localStorage.setItem('Phone',response.data.phone);
+                    localStorage.setItem('Address',response.data.address);
+                    localStorage.setItem('City',response.data.city);
+                    localStorage.setItem('Postal Code',response.data.zip);
+                    localStorage.setItem('Email',response.data.email);
+                    localStorage.setItem('Password',response.data.password);
                 })
                 .catch(function(error){
-                    alert('The form was not sent: ' + error.msg )
+                    alert('The form was not sent: ' + JSON.stringify(error));
                 })
         } else {
             document.getElementById('em-message-div').classList.add('em-form-group-wrong');
@@ -481,24 +487,9 @@ window.onload = function(){
         document.querySelector('#em-message-div .em-form-input-error').classList.remove('em-form-input-error-active');
         exitMessage.innerHTML = ' ';
     }
-    // Store data in local storage.
-    function storeData(){
-        jsondata.data.dob =  year + "-" + month  + "-" + day ;
-        localStorage.setItem('Employee',JSON.stringify(jsondata));
-        localStorage.setItem('Name',jsondata.data.name);
-        localStorage.setItem('Surname',jsondata.data.lastName);
-        localStorage.setItem('Id',jsondata.data.dni);
-        localStorage.setItem('Date of birth',jsondata.data.dob);
-        localStorage.setItem('Phone',jsondata.data.phone);
-        localStorage.setItem('Address',jsondata.data.address);
-        localStorage.setItem('City',jsondata.data.city);
-        localStorage.setItem('Postal Code',jsondata.data.zip);
-        localStorage.setItem('Email',jsondata.data.email);
-        localStorage.setItem('Password',jsondata.data.password);
-    }
-
+    // Restore data in local storage.
     function restoreData () {
-        if(localStorage.getItem('Employee')){
+        if(localStorage.getItem('Name')){
             inputs[0].value = localStorage.getItem('Name');
             inputs[1].value = localStorage.getItem('Surname');
             inputs[2].value = localStorage.getItem('Id');
@@ -509,9 +500,7 @@ window.onload = function(){
             inputs[7].value = localStorage.getItem('Postal Code');
             inputs[8].value = localStorage.getItem('Email');
             inputs[9].value = localStorage.getItem('Password');
-            inputs[10].value =localStorage.getItem('Password')
-        } else {
-            console.log('esta vacio');
+            inputs[10].value =localStorage.getItem('Password');
         }
     }
     restoreData();
