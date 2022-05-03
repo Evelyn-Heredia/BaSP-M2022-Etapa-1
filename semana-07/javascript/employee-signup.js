@@ -31,7 +31,7 @@ window.onload = function(){
                 symbols++
             }
         }
-        if (inputs[index].value.length >= 3 && num == 0 && lett >= 1 && symbols == 0){
+        if (inputs[index].value.length >= 4 && num == 0 && lett >= 1 && symbols == 0){
             return true;
         }else {
             return false;
@@ -143,23 +143,20 @@ window.onload = function(){
         }
     }
     // Validation function for Date of Birth
-    function birthValidation (){
+    function birthValidation() {
         var today = new Date();
-        var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0');
-        var yyyy = today.getFullYear();
-        today = yyyy  + '-' + mm + '-' + dd ;
-        var dateValue = inputs[3].value;
-        if(birthValidCharacters() !== 0 && dateValue < today){
+        var birthDate = new Date(inputs[3].value);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        if(age >= 18 && age <= 99){
             document.getElementById('em-birth-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-birth-div').classList.add('em-form-group-ok');
             document.querySelector('#em-birth-div .em-form-input-error').classList.remove('em-form-input-error-active');
-            return true
-        } else {
+            return true;
+        }else{
             document.getElementById('em-birth-div').classList.add('em-form-group-wrong');
             document.getElementById('em-birth-div').classList.remove('em-form-group-ok');
             document.querySelector('#em-birth-div .em-form-input-error').classList.add('em-form-input-error-active');
-            return false
+            return false;
         }
     }
     // Reset input field function for Birth of Date
@@ -282,7 +279,7 @@ window.onload = function(){
                 symbols++
             }
         }
-        if (inputs[index].value.length >= 3 && num == 0 && lett >= 1 && spa == 0 && symbols == 0){
+        if (inputs[index].value.length >= 4 && num == 0 && lett >= 1 && spa == 0 && symbols == 0){
             return true;
         }else {
             return false;
@@ -441,54 +438,41 @@ window.onload = function(){
     // Whole form validation
     function formValidation(e){
         e.preventDefault();
-        var validName = nameValidation();
-        var validSurname = surnameValidation();
-        var validId = idValidation();
-        var validBirth = birthValidation();
-        var validPhone= phoneValidation();
-        var validAddress = addressValidation();
-        var validCity = cityValidation();
-        var validPc = pcValidation();
-        var validEmail = emailValidation();
-        var validPasword = passwordValidation();
-        var validPasword2 = passwordValidation2();
-        if (validName === false  && validSurname === false && validId === false && validBirth === false && validPhone === false &&
-            validAddress === false && validCity === false && validPc === false && validEmail === false && validPasword === false &&
-            validPasword2 === false){
-            document.getElementById('em-message-div').classList.add('em-form-group-wrong');
-            document.getElementById('em-message-div').classList.remove('em-form-group-ok');
-            document.querySelector('#em-message-div .em-form-input-error').classList.add('em-form-input-error-active');
-        } else if (validName === false || validSurname === false || validId === false || validBirth === false || validPhone === false ||
-            validAddress === false || validCity === false || validPc === false || validEmail === false || validPasword === false ||
-            validPasword2 === false){
-            document.getElementById('em-message-div').classList.add('em-form-group-wrong');
-            document.getElementById('em-message-div').classList.remove('em-form-group-ok');
-            document.querySelector('#em-message-div .em-form-input-error').classList.add('em-form-input-error-active');
-        } else {
+        var validations = nameValidation() + surnameValidation() +
+        idValidation() + birthValidation() + phoneValidation() +
+        addressValidation() + cityValidation() + pcValidation() +
+        emailValidation() + passwordValidation() + passwordValidation2();
+        var date = inputs[3].value
+        var year = date.substring(0, 4);
+        var months = date.substring(5, 7);
+        var day = date.substring(8, 10);
+        var validDobFormat = months + '/' + day + '/' + year;
+        if (validations){
             document.getElementById('em-exit-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-exit-div').classList.add('em-form-group-ok');
-            exitMessage.innerHTML = 'Name: ' + inputs[0].value + ' Surname: ' + inputs[1].value + ' ID: ' + inputs[2].value + ' Birth Date: ' + inputs[3].value +
+            exitMessage.innerHTML = 'Name: ' + inputs[0].value + ' Surname: ' + inputs[1].value + ' ID: ' + inputs[2].value + ' Birth Date: ' + validDobFormat +
             ' Phone: ' + inputs[4].value + ' Address: ' + inputs[5].value + ' City: ' + inputs[6].value + ' Postal Code: ' + inputs[7].value + ' Email: ' + inputs[8].value +
-            ' Password 1: ' + inputs[9].value + ' Password 2: ' + inputs[10].value;
-        }
-        if (validName === true  && validSurname === true && validId === true && validBirth === true &&
-            validPhone === true && validAddress === true && validCity === true && validPc === true &&
-            validEmail === true && validPasword === true){ 
+            ' Password 1: ' + inputs[9].value;
             fetch ("https://basp-m2022-api-rest-server.herokuapp.com/signup?name=" + inputs[0].value + "&lastName=" +
-            inputs[1].value + "&dni=" + inputs[2].value +"&dob=" + inputs[3].value + "&phone=" + inputs[4].value +
-            "&address=" + inputs[5].value + "&city=" + inputs[6].value + "&zip=" + inputs[7].value + "&email=" + inputs[8].value + "&password=" + inputs[9].value)
-                .then(function(data){
-                    console.log(data);
-                    return data.json();
+            inputs[1].value + "&dni=" + inputs[2].value +"&dob=" + validDobFormat + "&phone=" + inputs[4].value +
+            "&address=" + inputs[5].value + "&city=" + inputs[6].value + "&zip=" + inputs[7].value + "&email=" +
+            inputs[8].value + "&password=" + inputs[9].value)
+                .then(function(response){
+                    console.log(response);
+                    return response.json();
                 })
-                .then(function(data){
-                    console.log(data)
-                    alert('The form was successfully sent: ' + data.msg);
+                .then(function(response){
+                    alert(response.msg); 
+                    var jsondata = response; 
                 })
                 .catch(function(error){
-                    alert('The form was not sent' + error );
+                    alert('The form was not sent: ' + error.msg )
                 })
-        } 
+        } else {
+            document.getElementById('em-message-div').classList.add('em-form-group-wrong');
+            document.getElementById('em-message-div').classList.remove('em-form-group-ok');
+            document.querySelector('#em-message-div .em-form-input-error').classList.add('em-form-input-error-active');
+        }
     }
     // Whole form reset function
     function formReset(){
@@ -497,6 +481,40 @@ window.onload = function(){
         document.querySelector('#em-message-div .em-form-input-error').classList.remove('em-form-input-error-active');
         exitMessage.innerHTML = ' ';
     }
+    // Store data in local storage.
+    function storeData(){
+        jsondata.data.dob =  year + "-" + month  + "-" + day ;
+        localStorage.setItem('Employee',JSON.stringify(jsondata));
+        localStorage.setItem('Name',jsondata.data.name);
+        localStorage.setItem('Surname',jsondata.data.lastName);
+        localStorage.setItem('Id',jsondata.data.dni);
+        localStorage.setItem('Date of birth',jsondata.data.dob);
+        localStorage.setItem('Phone',jsondata.data.phone);
+        localStorage.setItem('Address',jsondata.data.address);
+        localStorage.setItem('City',jsondata.data.city);
+        localStorage.setItem('Postal Code',jsondata.data.zip);
+        localStorage.setItem('Email',jsondata.data.email);
+        localStorage.setItem('Password',jsondata.data.password);
+    }
+
+    function restoreData () {
+        if(localStorage.getItem('Employee')){
+            inputs[0].value = localStorage.getItem('Name');
+            inputs[1].value = localStorage.getItem('Surname');
+            inputs[2].value = localStorage.getItem('Id');
+            inputs[3].value = localStorage.getItem('Date of birth');
+            inputs[4].value = localStorage.getItem('Phone');
+            inputs[5].value = localStorage.getItem('Address');
+            inputs[6].value = localStorage.getItem('City');
+            inputs[7].value = localStorage.getItem('Postal Code');
+            inputs[8].value = localStorage.getItem('Email');
+            inputs[9].value = localStorage.getItem('Password');
+            inputs[10].value =localStorage.getItem('Password')
+        } else {
+            console.log('esta vacio');
+        }
+    }
+    restoreData();
     ////////////////////////////////////////////////////////////////////////////////////
     //////////// Validations ////////////
     //Name field validation
@@ -536,3 +554,4 @@ window.onload = function(){
     createBtn.addEventListener('click', formValidation);
     createBtn.addEventListener('blur', formReset);
 }
+

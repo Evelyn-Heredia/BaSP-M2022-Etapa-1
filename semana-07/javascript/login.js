@@ -82,32 +82,30 @@ window.onload = function(){
         e.preventDefault();
         var validEmail = mailValidation();
         var validPasword = passwordValidation();
-        if (validEmail === true && validPasword === true){
+        if (validEmail && validPasword){
             document.getElementById('exit-div').classList.remove('form-group-wrong');
             document.getElementById('exit-div').classList.add('form-group-ok');
             exitMessage.innerHTML = 'Email: ' + inputs[0].value + ' Password: ' + inputs[1].value;
+            fetch ("https://basp-m2022-api-rest-server.herokuapp.com/login?email=" + inputs[0].value +
+            "&password=" + inputs[1].value)
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(response){
+                    alert(response.msg);  
+                })
+                .catch(function(error){
+                    return error.json();
+                })
+                .catch(function(error){
+                    alert('The form was not sent' + error.msg);
+                })
         } else {
             document.getElementById('message-div').classList.add('form-group-wrong');
             document.getElementById('message-div').classList.remove('form-group-ok');
             document.querySelector('#message-div .form-input-error').classList.add('form-input-error-active');
         } 
-        if (inputs[0].value === "rose@radiumrocket.com" && inputs[1].value === "BaSP2022"){ 
-            fetch ("https://basp-m2022-api-rest-server.herokuapp.com/login?email=" + inputs[0].value +
-            "&password=" + inputs[1].value)
-                .then(function(data){
-                    console.log(data);
-                    return data.json(); 
-                })
-                .then(function(data){
-                    console.log(data)
-                    alert('The form was successfully sent: ' + data.msg);
-                })
-                .catch(function(error){
-                    console.log(error);
-                    alert('The form was not sent' + JSON.stringify(error)); 
-                })
         }
-    }
     // Whole form reset function
     function resetFormValidation(e){
         document.getElementById('message-div').classList.remove('form-group-wrong');
