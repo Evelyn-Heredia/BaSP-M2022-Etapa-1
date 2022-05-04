@@ -45,6 +45,7 @@ main {
     display: flex;
     color: #bb2929;
     font-size: 12px;
+    text-transform: initial;
 }
 .form-input-error-exit {
     display: none;

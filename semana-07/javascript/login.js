@@ -92,7 +92,7 @@ window.onload = function(){
                     return response.json();
                 })
                 .then(function(response){
-                    alert(response.msg);  
+                    alert(response.msg + ' ' + JSON.stringify(response));  
                 })
                 .catch(function(error){
                     return error.json();
@@ -104,6 +104,7 @@ window.onload = function(){
             document.getElementById('message-div').classList.add('form-group-wrong');
             document.getElementById('message-div').classList.remove('form-group-ok');
             document.querySelector('#message-div .form-input-error').classList.add('form-input-error-active');
+            exitMessage.innerHTML = ' ';
         } 
         }
     // Whole form reset function

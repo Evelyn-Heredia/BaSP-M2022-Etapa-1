@@ -10,8 +10,37 @@ window.onload = function(){
     // Create button
     var createBtn = document.getElementById('create-btn');
     //////////// Functions ////////////
-    //Validation function for NAME characters
+    //Validation function for NAME, SURNAME, and CITY characters
     function validCharacters(index){
+        var numbers = ['0','1','2','3','4','5','6','7','8','9'];
+        var letters = ["a","b","c","d","e","f","g","h","i","j","k",
+        "l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", 
+        "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
+        "Q","R","S","T","U","V","W","X","Y","Z"];
+        var space = ' ';
+        var num = 0;
+        var lett = 0;
+        var spa = 0;
+        var symbols = 0;
+        for(var i = 0; i < inputs[index].value.length; i ++){
+            if(numbers.includes(inputs[index].value[i])){
+                num++;   
+            }else if (letters.includes(inputs[index].value[i])){
+                lett++;
+            } else if (space.includes(inputs[index].value[i])){
+                spa++;
+            } else {
+                symbols++
+            }
+        }
+        if (inputs[index].value.length >= 4 && num == 0 && lett >= 1 && spa == 0 && symbols == 0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    //Validation function for ID, POSTAL CODE and PHONE characters
+    function validNumbers(index, num1, num2){
         var numbers = ['0','1','2','3','4','5','6','7','8','9'];
         var letters = ["a","b","c","d","e","f","g","h","i","j","k",
         "l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", 
@@ -19,17 +48,48 @@ window.onload = function(){
         "Q","R","S","T","U","V","W","X","Y","Z"];
         var num = 0;
         var lett = 0;
+        var other = 0;
+        for(var i = 0; i < inputs[index].value.length; i ++){
+            if(numbers.includes(inputs[index].value[i])){
+                num++;   
+            } else if (letters.includes(inputs[index].value[i])){
+                lett++;
+            } else {
+                other++
+            }
+        }
+        if (inputs[index].value.length <= num1 && num >= num2 && lett == 0 && other == 0){
+            return true;
+        }else if (isNaN(index)) {
+            return false;
+        } else {
+            return false;
+        }
+    }
+    //Validation function for ADDRESS and PASSWORD characters
+    function validInputs(index, num1, num2, num3, num4, num5){
+        var numbers = ['0','1','2','3','4','5','6','7','8','9'];
+        var letters = ["a","b","c","d","e","f","g","h","i","j","k",
+        "l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", 
+        "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
+        "Q","R","S","T","U","V","W","X","Y","Z"];
+        var space = ' ';
+        var num = 0;
+        var lett = 0;
+        var spa = 0;
         var symbols = 0;
         for(var i = 0; i < inputs[index].value.length; i ++){
             if(numbers.includes(inputs[index].value[i])){
                 num++;   
             }else if (letters.includes(inputs[index].value[i])){
                 lett++;
+            } else if (space.includes(inputs[index].value[i])){
+                spa++;
             } else {
                 symbols++
             }
         }
-        if (inputs[index].value.length >= 4 && num == 0 && lett >= 1 && symbols == 0){
+        if (inputs[index].value.length >= num1 && num >= num2 && lett >= num3 && spa == num4 && symbols == num5){
             return true;
         }else {
             return false;
@@ -77,31 +137,9 @@ window.onload = function(){
         document.getElementById('em-surname-div').classList.remove('em-form-group-ok');
         document.querySelector('#em-surname-div .em-form-input-error').classList.remove('em-form-input-error-active');
     }
-    //Validation function for ID characters
-    function idValidCharacters(index){
-        var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-        var num = 0;
-        var other = 0;
-        for(var i = 0; i < inputs[index].value.length; i ++){
-            if(numbers.includes(inputs[index].value[i])){
-                num++;   
-            } else if (letters.includes(inputs[index].value[i])){
-                lett++;
-            } else {
-                other++
-            }
-        }
-        if (inputs[index].value.length <=8 && num >= 7 && other == 0){
-            return true;
-        }else if (isNaN(index)) {
-            return false;
-        } else {
-            return false;
-        }
-    }
     //Validation function for ID
     function idValidation() {
-        var validationOk = idValidCharacters(2);
+        var validationOk = validNumbers(2, 8, 7);
         if(validationOk){
             document.getElementById('em-id-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-id-div').classList.add('em-form-group-ok');
@@ -119,26 +157,6 @@ window.onload = function(){
         document.getElementById('em-id-div').classList.remove('em-form-group-wrong');
         document.getElementById('em-id-div').classList.remove('em-form-group-ok');
         document.querySelector('#em-id-div .em-form-input-error').classList.remove('em-form-input-error-active');
-    }
-    //Validation function for Date of Birth
-    function birthValidCharacters(){
-        var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-        var num = 0;
-        var other = 0;
-        for(var i = 0; i < inputs[3].value.length; i ++){
-            if(numbers.includes(inputs[3].value[i])){
-                num++;   
-            } else {
-                other++
-            }
-        }
-        if (inputs[3].value.length <=8 && num <= 6  && other == 0){
-            return true;
-        }else if (isNaN(inputs[3].value)) {
-            return false;
-        } else {
-            return false;
-        }
     }
     // Validation function for Date of Birth
     function birthValidation() {
@@ -163,29 +181,9 @@ window.onload = function(){
         document.getElementById('em-birth-div').classList.remove('em-form-group-ok');
         document.querySelector('#em-birth-div .em-form-input-error').classList.remove('em-form-input-error-active');
     }
-    //Validation function for Phone numbers
-    function phoneValidCharacters(index){
-        var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-        var num = 0;
-        var other = 0;
-        for(var i = 0; i < inputs[index].value.length; i ++){
-            if(numbers.includes(inputs[index].value[i])){
-                num++;   
-            } else if (letters.includes(inputs[index].value[i])){
-                lett++;
-            } else {
-                other++
-            }
-        }
-        if (inputs[index].value.length === 10 && num >= 1 && other == 0){
-            return true;
-        }else {
-            return false;
-        }
-    }
     //Validation function for Phone
     function phoneValidation() {
-        var validationOk = phoneValidCharacters(4);
+        var validationOk = validNumbers(4, 11, 10);
         if(validationOk){
             document.getElementById('em-phone-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-phone-div').classList.add('em-form-group-ok');
@@ -204,38 +202,9 @@ window.onload = function(){
         document.getElementById('em-phone-div').classList.remove('em-form-group-ok');
         document.querySelector('#em-phone-div .em-form-input-error').classList.remove('em-form-input-error-active');
     }
-    //Validation function for ADDRESS characters
-    function addressCharacters(index){
-        var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-        var letters = ["a","b","c","d","e","f","g","h","i","j","k",
-        "l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", 
-        "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
-        "Q","R","S","T","U","V","W","X","Y","Z"];
-        var space = ' ';
-        var num = 0;
-        var lett = 0;
-        var spa = 0;
-        var symbols = 0;
-        for(var i = 0; i < inputs[index].value.length; i ++){
-            if(numbers.includes(inputs[index].value[i])){
-                num++;   
-            }else if (letters.includes(inputs[index].value[i])){
-                lett++;
-            } else if (space.includes(inputs[index].value[i])){
-                spa++;
-            } else {
-                symbols++
-            }
-        }
-        if (inputs[index].value.length >= 5 && num >= 1 && lett >= 3 && spa == 1 && symbols == 0){
-            return true;
-        }else {
-            return false;
-        }
-    }
     //Validation function for address
     function addressValidation() {
-        var validationOk = addressCharacters(5);
+        var validationOk = validInputs(5,5,1,3,1,0);
         if(validationOk){
             document.getElementById('em-address-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-address-div').classList.add('em-form-group-ok');
@@ -254,38 +223,9 @@ window.onload = function(){
         document.getElementById('em-address-div').classList.remove('em-form-group-ok');
         document.querySelector('#em-address-div .em-form-input-error').classList.remove('em-form-input-error-active');
     }
-    //Validation function for CITY characters
-    function cityCharacters(index){
-        var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-        var letters = ["a","b","c","d","e","f","g","h","i","j","k",
-        "l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", 
-        "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
-        "Q","R","S","T","U","V","W","X","Y","Z"];
-        var space = ' ';
-        var num = 0;
-        var lett = 0;
-        var spa = 0;
-        var symbols = 0;
-        for(var i = 0; i < inputs[index].value.length; i ++){
-            if(numbers.includes(inputs[index].value[i])){
-                num++;   
-            }else if (letters.includes(inputs[index].value[i])){
-                lett++;
-            } else if (space.includes(inputs[index].value[i])){
-                spa++;
-            } else {
-                symbols++
-            }
-        }
-        if (inputs[index].value.length >= 4 && num == 0 && lett >= 1 && spa == 0 && symbols == 0){
-            return true;
-        }else {
-            return false;
-        }
-    }
     //Validation function for city
     function cityValidation() {
-        var validationOk = cityCharacters(6);
+        var validationOk = validCharacters(6);
         if(validationOk){
             document.getElementById('em-city-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-city-div').classList.add('em-form-group-ok');
@@ -304,29 +244,9 @@ window.onload = function(){
         document.getElementById('em-city-div').classList.remove('em-form-group-ok');
         document.querySelector('#em-city-div .em-form-input-error').classList.remove('em-form-input-error-active');
     }
-    //Validation function for POSTAL CODE characters
-    function pcValidCharacters(index){
-        var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-        var num = 0;
-        var other = 0;
-        for(var i = 0; i < inputs[index].value.length; i ++){
-            if(numbers.includes(inputs[index].value[i])){
-                num++;   
-            } else if (letters.includes(inputs[index].value[i])){
-                lett++;
-            } else {
-                other++
-            }
-        }
-        if (inputs[index].value.length <=5 && num >= 4 && other == 0){
-            return true;
-        }else {
-            return false;
-        }
-    }
     //Validation function for POSTAL CODE
     function pcValidation() {
-        var validationOk = pcValidCharacters(7);
+        var validationOk = validNumbers(7, 5, 4);
         if(validationOk){
             document.getElementById('em-pc-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-pc-div').classList.add('em-form-group-ok');
@@ -365,34 +285,9 @@ window.onload = function(){
         document.getElementById('em-email-div').classList.remove('em-form-group-ok');
         document.querySelector('#em-email-div .em-form-input-error').classList.remove('em-form-input-error-active');
     }
-    //Validation function for password characters
-    function passwordCharacValidation(index){
-        var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-        var letters = ["a","b","c","d","e","f","g","h","i","j","k",
-        "l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", 
-        "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
-        "Q","R","S","T","U","V","W","X","Y","Z"];
-        var num = 0;
-        var lett = 0;
-        var symbols = 0;
-        for(var i = 0; i < inputs[index].value.length; i ++){
-            if(numbers.includes(inputs[index].value[i])){
-                num++;   
-            }else if (letters.includes(inputs[index].value[i])){
-                lett++;
-            } else {
-                symbols++
-            }
-        }
-        if (inputs[index].value.length >= 7 && num >= 1 && lett >= 1 && symbols == 0){
-            return true;
-        }else {
-            return false;
-        }
-    }
-    //Validation function for Password
+    ///Validation function for Password
     function passwordValidation() {
-        var passValidation = passwordCharacValidation(9);
+        var passValidation = validInputs(9,7,1,1,0,0);
         if(passValidation){
             document.getElementById('em-password-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-password-div').classList.add('em-form-group-ok');
@@ -413,8 +308,8 @@ window.onload = function(){
     }
     //Validation function for Repeat password
     function passwordValidation2() {
-        var passValidation = passwordCharacValidation(9);
-        var passValidation2 = passwordCharacValidation(10);
+        var passValidation = validInputs(9,7,1,1,0,0);
+        var passValidation2 = validInputs(10,7,1,1,0,0);
         if(passValidation && passValidation2 && inputs[9].value === inputs[10].value && passValidation2 !== null){
             document.getElementById('em-repeat-password-div').classList.remove('em-form-group-wrong');
             document.getElementById('em-repeat-password-div').classList.add('em-form-group-ok');
@@ -478,6 +373,7 @@ window.onload = function(){
             document.getElementById('em-message-div').classList.add('em-form-group-wrong');
             document.getElementById('em-message-div').classList.remove('em-form-group-ok');
             document.querySelector('#em-message-div .em-form-input-error').classList.add('em-form-input-error-active');
+            exitMessage.innerHTML = ' ';
         }
     }
     // Whole form reset function
@@ -487,7 +383,7 @@ window.onload = function(){
         document.querySelector('#em-message-div .em-form-input-error').classList.remove('em-form-input-error-active');
         exitMessage.innerHTML = ' ';
     }
-    // Restore data in local storage.
+    // Restore data from local storage to form.
     function restoreData () {
         if(localStorage.getItem('Name')){
             inputs[0].value = localStorage.getItem('Name');
@@ -504,8 +400,6 @@ window.onload = function(){
         }
     }
     restoreData();
-    ////////////////////////////////////////////////////////////////////////////////////
-    //////////// Validations ////////////
     //Name field validation
     inputs[0].addEventListener('blur', nameValidation);
     inputs[0].addEventListener('focus', nameResetForm);

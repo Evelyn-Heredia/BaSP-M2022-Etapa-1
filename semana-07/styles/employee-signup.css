@@ -43,8 +43,13 @@ main {
 }
 .em-form-input-error-active{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
     color: #bb2929;
     font-size: 12px;
+    text-transform: initial;
+    text-align: justify;
 }
 .em-form-input-error-exit {
     display: none;
